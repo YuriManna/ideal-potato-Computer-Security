@@ -1,0 +1,162 @@
+2024-11-08 19:20:29,771 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://145.127.43.228:5000
+2024-11-08 19:20:29,771 [33mPress CTRL+C to quit[0m
+2024-11-08 19:23:29,468 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://145.127.43.228:5000
+2024-11-08 19:23:29,468 [33mPress CTRL+C to quit[0m
+2024-11-08 19:25:54,815 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://145.127.43.228:5000
+2024-11-08 19:25:54,815 [33mPress CTRL+C to quit[0m
+2024-11-08 19:27:43,043 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://145.127.43.228:5000
+2024-11-08 19:27:43,043 [33mPress CTRL+C to quit[0m
+2024-11-08 19:28:18,042 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://145.127.43.228:5000
+2024-11-08 19:28:18,042 [33mPress CTRL+C to quit[0m
+2024-11-08 19:28:34,019 127.0.0.1 - - [08/Nov/2024 19:28:34] code 400, message Bad request version ('0\x16»\xa1\xb30T%\xfe\xc5~\xf5d\x8d«\x11\x1b\x95\\\xca!0\x91\x89÷h\xff)uQ¤b\x04Â\x8d\x04%\xa3C\x91\x84¤\x93\x1a\x8a\x12\xbep\x88\xb3\x9f\xe8$ó\xecs3\x8ah\x84q\x13\xe5kÄE\x17\x92T*Ff')
+2024-11-08 19:28:34,019 127.0.0.1 - - [08/Nov/2024 19:28:34] "[31m[1m\x16\x03\x01\x06\xc0\x01\x00\x06\xbc\x03\x03\x9b;\x87ók\xe3\xe6\x1fR\xf8\xc3Se\x95\xb9\x87\xc5\x15\x91\xc0Ý%\xe0ôB\xe5\x18T|ó\x0fë \x91"\xb3mI.y\x16\x86/=\xc5\x93ö'\x81s\xbe=«¨P@ä\x81\x0fI\xa2\xb2í\x96L\x00 \xea\xea\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc©\xcc¨\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SZZ\x00\x00\xfe\x0d\x00Ú\x00\x00\x01\x00\x01\x80\x00 H!\xe8î\x1f\x98çr4\x08\x979±]!\x0d\x91\x86\x04\x83m\xec{×\x89<l\xaa}\x0b\x1aY\x00°\x0e\x7f\x0d×\x1b\xca\x83¬4ýr\xe5\xf5}\x15Ö/Úë\xf0\x88\x05Î\x8c81á´@¸hu\x1e#G\xf5ô=Bço\xe52k\xbc\xd2©k7\x13ó\xbf×'\x8c\xec+T\x12¶\x03\xc6\xf2\x00\x1dg+{t\xb2\x0c\xe8\xfe\xbc\x0ce\x0c_\x0b\xdb8&\x0e[\x11\xb9%\xe3\xb3\xbfC\x06W\x83\x95¶\x9fT¶z\xd95\xd2Ä\xc3\xb2ó%3\x9d\x9b\x99#{\x08\xaf4eV\x1bé\xa2L\xa2\xcc-óE\xf9\xf8L\xd1^,\x9c\x00;\x1eC\xf2\x8d\xf8/KA\xd50ÚH.@N{\xfbÝ]6\x8c\x1e\x0e\xe5«%\x18\xd1H\xc5\x15â´\xcfú\xcaü\x7f\xeaDi\x00\x05\x00\x03\x02h2\x00\x12\x00\x00\x00+\x00\x07\x06\xba\xba\x03\x04\x03\x03\xff\x01\x00\x01\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04\xef\x04í\xba\xba\x00\x01\x00c\x99\x04\xc0\xbcdµa°d0\x9d4\x02°{\xe8\xb2\x19\x9e\x06A\x8c\xbe-w\x08V3Î\xf0c°\x03Ä\x17\x94\x11V4Ç0Äed\x0c0\x16»\xa1\xb30T%\xfe\xc5~\xf5d\x8d«\x11\x1b\x95\\\xca!0\x91\x89÷h\xff)uQ¤b\x04Â\x8d\x04%\xa3C\x91\x84¤\x93\x1a\x8a\x12\xbep\x88\xb3\x9f\xe8$ó\xecs3\x8ah\x84q\x13\xe5kÄE\x17\x92T*Ff[0m" 400 -
+2024-11-08 19:28:34,021 127.0.0.1 - - [08/Nov/2024 19:28:34] code 400, message Bad request version ('::\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc©\xcc¨\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s')
+2024-11-08 19:28:34,021 127.0.0.1 - - [08/Nov/2024 19:28:34] "[31m[1m\x16\x03\x01\x06\xe0\x01\x00\x06Ü\x03\x03<¤\x81\x07Z\x82\x12éP°\xbd\xc3s ¨Ká\xec4u~\xc0\x9d÷e\xe3\x14\x82Dç\\× \x1f|GúG\xe5\xe5\x9c\xff*\xde\x8dP\x87P\x87ßÜ¶\xbd©\xcc?\xaf6\x90\x02×r\xe0\xcfÁ\x00 ::\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc©\xcc¨\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s[0m" 400 -
+2024-11-08 19:29:31,114 Exception on /status [GET]
+Traceback (most recent call last):
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 88, in status
+    return render_template('status.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: status.html
+2024-11-08 19:29:31,116 127.0.0.1 - - [08/Nov/2024 19:29:31] "[35m[1mGET /status HTTP/1.1[0m" 500 -
+2024-11-08 19:29:31,361 127.0.0.1 - - [08/Nov/2024 19:29:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-08 19:30:14,110 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://145.127.43.228:5000
+2024-11-08 19:30:14,110 [33mPress CTRL+C to quit[0m
+2024-11-08 19:30:39,595 Exception on /status [GET]
+Traceback (most recent call last):
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 88, in status
+    return render_template('status.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: status.html
+2024-11-08 19:30:39,597 127.0.0.1 - - [08/Nov/2024 19:30:39] "[35m[1mGET /status HTTP/1.1[0m" 500 -
+2024-11-08 19:30:39,864 127.0.0.1 - - [08/Nov/2024 19:30:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-08 19:33:05,655 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://145.127.43.228:5000
+2024-11-08 19:33:05,655 [33mPress CTRL+C to quit[0m
+2024-11-08 19:33:08,760 127.0.0.1 - - [08/Nov/2024 19:33:08] "GET /status HTTP/1.1" 200 -
+2024-11-08 19:36:01,659 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://145.127.43.228:5000
+2024-11-08 19:36:01,659 [33mPress CTRL+C to quit[0m
+2024-11-08 19:36:04,550 127.0.0.1 - - [08/Nov/2024 19:36:04] "GET /status HTTP/1.1" 200 -
+2024-11-08 19:36:04,626 127.0.0.1 - - [08/Nov/2024 19:36:04] "[33mGET /static/static\\images\\Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 404 -
+2024-11-08 19:36:06,372 127.0.0.1 - - [08/Nov/2024 19:36:06] "GET /status HTTP/1.1" 200 -
+2024-11-08 19:36:06,467 127.0.0.1 - - [08/Nov/2024 19:36:06] "[33mGET /static/static\\images\\Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 404 -
+2024-11-08 19:36:33,484 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://145.127.43.228:5000
+2024-11-08 19:36:33,484 [33mPress CTRL+C to quit[0m
+2024-11-08 19:36:35,791 127.0.0.1 - - [08/Nov/2024 19:36:35] "GET /status HTTP/1.1" 200 -
+2024-11-08 19:36:35,878 127.0.0.1 - - [08/Nov/2024 19:36:35] "[33mGET /static/static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 404 -
+2024-11-08 19:36:37,426 127.0.0.1 - - [08/Nov/2024 19:36:37] "GET /status HTTP/1.1" 200 -
+2024-11-08 19:36:37,478 127.0.0.1 - - [08/Nov/2024 19:36:37] "[33mGET /static/static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 404 -
+2024-11-08 19:36:37,881 127.0.0.1 - - [08/Nov/2024 19:36:37] "GET /status HTTP/1.1" 200 -
+2024-11-08 19:36:38,044 127.0.0.1 - - [08/Nov/2024 19:36:38] "[33mGET /static/static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 404 -
+2024-11-08 19:36:38,154 127.0.0.1 - - [08/Nov/2024 19:36:38] "GET /status HTTP/1.1" 200 -
+2024-11-08 19:36:38,296 127.0.0.1 - - [08/Nov/2024 19:36:38] "[33mGET /static/static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 404 -
+2024-11-08 19:37:49,410 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://145.127.43.228:5000
+2024-11-08 19:37:49,414 [33mPress CTRL+C to quit[0m
+2024-11-08 19:37:57,684 127.0.0.1 - - [08/Nov/2024 19:37:57] "GET /status HTTP/1.1" 200 -
+2024-11-08 19:37:57,937 127.0.0.1 - - [08/Nov/2024 19:37:57] "GET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1" 200 -
+2024-11-08 19:46:02,366 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://145.127.43.228:5000
+2024-11-08 19:46:02,366 [33mPress CTRL+C to quit[0m
+2024-11-08 19:47:59,077 127.0.0.1 - - [08/Nov/2024 19:47:59] "POST /register HTTP/1.1" 200 -
+2024-11-08 19:48:01,188 Client client1: INCREASE 10. New counter value: 10
+2024-11-08 19:48:01,191 127.0.0.1 - - [08/Nov/2024 19:48:01] "POST /action HTTP/1.1" 200 -
+2024-11-08 19:48:03,279 Client client1: DECREASE 5. New counter value: 5
+2024-11-08 19:48:03,281 127.0.0.1 - - [08/Nov/2024 19:48:03] "POST /action HTTP/1.1" 200 -
+2024-11-08 19:48:05,359 Client client1: INCREASE 15. New counter value: 20
+2024-11-08 19:48:05,361 127.0.0.1 - - [08/Nov/2024 19:48:05] "POST /action HTTP/1.1" 200 -
+2024-11-08 19:48:05,427 127.0.0.1 - - [08/Nov/2024 19:48:05] "POST /logout HTTP/1.1" 200 -
