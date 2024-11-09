@@ -28,25 +28,28 @@ def main(config):
     #session.verify = False  # Not recommended for production environments
     session.verify = 'server.crt'  # Path to the server's certificate
 
-    # Ensure the client is registered via the web interface before running this script
-    # Optionally, attempt to register via the API if allowed
+    # Authenticate with the server
     data = {'id': client_id, 'password': password}
-    response = session.post(f"{server_url}/api/register", json=data)
+    try:
+        response = session.post(f"{server_url}/api/register", json=data)
+    except requests.exceptions.SSLError as e:
+        print(f"SSL Error: {e}")
+        return
+
     if response.status_code == 200:
-        print(f"Client {client_id}: Registered successfully.")
-    elif response.status_code == 403 and response.json()['message'] == 'Authentication failed':
-        print(f"Client {client_id}: Authentication failed.")
-        return
+        print(f"Client {client_id}: Authenticated successfully.")
+        token = response.json()['token']
     else:
-        print(f"Client {client_id}: Registration failed - {response.json()['message']}")
+        print(f"Client {client_id}: Authentication failed - {response.json()['message']}")
         return
-    
+
+    headers = {'Authorization': f'Bearer {token}'}
 
     # Perform actions with delays
     for action in steps:
         time.sleep(delay)
-        data = {'id': client_id, 'password': password, 'action': action}
-        response = session.post(f"{server_url}/action", json=data)
+        data = {'action': action}
+        response = session.post(f"{server_url}/action", json=data, headers=headers)
         if response.status_code == 200:
             new_value = response.json()['new_value']
             print(f"Client {client_id}: Action '{action}' performed. New counter value: {new_value}")
@@ -56,13 +59,11 @@ def main(config):
     time.sleep(50) 
 
     # Log out from the server
-    data = {'id': client_id, 'password': password}
-    response = session.post(f"{server_url}/logout", json=data)
+    response = session.get(f"{server_url}/logout", headers=headers)
     if response.status_code == 200:
         print(f"Client {client_id}: Logged out successfully.")
     else:
-        print(f"Client {client_id}: Logout failed - {response.json()['message']}")
-
+        print(f"Client {client_id}: Logout failed - {response.text}")  # Print raw response
 
 # Main function
 # Usage: python client.py client_config.json

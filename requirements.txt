@@ -4,3 +4,5 @@ Flask-WTF==1.0.0
 WTForms==3.0.1
 Flask-Limiter==2.0.1
 requests==2.26.0
+werkzeug==2.0.3
+PyJWT==2.3.0

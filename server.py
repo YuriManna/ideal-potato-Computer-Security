@@ -1,15 +1,18 @@
 # Server application code
 
 # imports
+from datetime import datetime, timedelta
 import bcrypt # Secure password hashing library
 from flask import Flask, render_template, request, jsonify, redirect, url_for, session # Web framework and session management
 import threading # Ensures thread-safe operations
-import logging # Logging module
-import time
+import logging # Logging module\
+import jwt  # For JSON Web Tokens
+from functools import wraps
 import secrets
 import re # Regular expressions for input validation
 # Form handling and validation
-from flask_wtf import FlaskForm
+from flask_wtf import FlaskForm, CSRFProtect
+from flask_wtf.csrf import generate_csrf
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Length, Regexp, Optional, ValidationError
 # Rate limiting to prevent abuse
@@ -21,8 +24,11 @@ app = Flask(__name__)
 app.secret_key = '3f41d5d0b1633b8c03ded3b3db4410e7' #TODO: generate one and store safely
 # print(app.secret_key)
 
+# Enable CSRF protection
+csrf = CSRFProtect(app)
+
 # Configure logging
-logging.basicConfig(filename='server.log', level=logging.INFO, format='%(asctime)s %(message)s')
+logging.basicConfig(filename='server.log', level=logging.DEBUG, format='%(asctime)s %(message)s')
 
 clients = {}  # Keeps track of registered clients, their hashed passwords, personal counters, and the number of active connections
 lock = threading.Lock()  # Ensures thread-safe operations
@@ -36,6 +42,11 @@ limiter.init_app(app)
 
 #------------------------------------------------------------------------------------------------
 # Functions
+
+@app.route('/csrf-token', methods=['GET'])
+def csrf_token():
+    token = generate_csrf()
+    return jsonify({'csrf_token': token})
 
 def is_valid_input(input_str):
     """
@@ -75,6 +86,70 @@ def parse_action(action_str):
         return command, amount
     else:
         return None, None
+    
+def generate_token(client_id):
+    """Generates a JWT token."""
+    payload = {
+        'client_id': client_id,
+        'exp': datetime.utcnow() + timedelta(hours=1)  # Token expires in 1 hour
+    }
+    token = jwt.encode(payload, app.secret_key, algorithm='HS256')
+    return token
+
+def token_required(f):
+    """Decorator to check for valid token in API requests."""
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        token = None
+        # Token can be passed in the header or cookies
+        if 'Authorization' in request.headers:
+            auth_header = request.headers.get('Authorization')
+            token_parts = auth_header.split()
+            if len(token_parts) == 2 and token_parts[0] == 'Bearer':
+                token = token_parts[1]
+                logging.debug(f"Token extracted from Authorization header: {token}")
+        elif 'token' in request.cookies:
+            token = request.cookies.get('token')
+            logging.debug(f"Token extracted from cookies: {token}")
+
+        if not token:
+            logging.warning(f"Token missing in request from IP {request.remote_addr}")
+            return jsonify({'status': 'error', 'message': 'Token is missing!'}), 401
+        try:
+            data = jwt.decode(token, app.secret_key, algorithms=['HS256'])
+            client_id = data['client_id']
+            logging.debug(f"Token decoded successfully. Client ID: {client_id}")
+            # Check if client exists
+            with lock:
+                if client_id not in clients:
+                    logging.warning(f"Client ID '{client_id}' from token does not exist.")
+                    return jsonify({'status': 'error', 'message': 'Invalid token!'}), 401
+        except jwt.ExpiredSignatureError:
+            logging.warning(f"Expired token used from IP {request.remote_addr}")
+            return jsonify({'status': 'error', 'message': 'Token has expired!'}), 401
+        except jwt.InvalidTokenError:
+            logging.warning(f"Invalid token used from IP {request.remote_addr}")
+            return jsonify({'status': 'error', 'message': 'Invalid token!'}), 401
+        return f(client_id, *args, **kwargs)
+    return decorated
+
+
+# Token Authentication for Web Routes
+def get_client_id_from_token():
+    token = request.cookies.get('token')
+    if not token:
+        return None
+    try:
+        data = jwt.decode(token, app.secret_key, algorithms=['HS256'])
+        client_id = data['client_id']
+        with lock:
+            if client_id in clients:
+                return client_id
+    except jwt.ExpiredSignatureError:
+        return None
+    except jwt.InvalidTokenError:
+        return None
+    return None
     
 #------------------------------------------------------------------------------------------------
 # Forms
@@ -117,8 +192,10 @@ class ActionForm(FlaskForm):
 # Routes
 
 # Allow users to register/login via the API (cmd json format)
+@limiter.limit("5 per minute") # Rate limit to prevent abuse
+@csrf.exempt # Disable CSRF protection for this route
 @app.route('/api/register', methods=['POST'])
-def register():
+def api_register():
     data = request.get_json() # Get the JSON data
     client_id = data.get('id') # Get the client ID
     password = data.get('password') # Get the password
@@ -135,21 +212,26 @@ def register():
         if client_id in clients:
             # Authenticate the client
             if not bcrypt.checkpw(password.encode('utf-8'), clients[client_id]['password']):
+                logging.warning(f"Failed login attempt for user '{client_id}' from IP {request.remote_addr}")
                 return jsonify({'status': 'error', 'message': 'Authentication failed'}), 403
             else:
                 # Increment the number of connections
                 clients[client_id]['connections'] += 1
+                logging.info(f"User '{client_id}' logged in successfully from IP {request.remote_addr}")
         else:
             # Else register the client
             clients[client_id] = {'password': hashed_password, 'counter': 0, 'connections': 1}
+            logging.info(f"User '{client_id}' registered successfully from IP {request.remote_addr}")
 
-    return jsonify({'status': 'success', 'message': 'Registered successfully'}), 200
+    token = generate_token(client_id)
+    return jsonify({'status': 'success', 'message': 'Registered successfully', 'token': token}), 200
 
 # Allow users to register/login via website
 @limiter.limit("5 per minute") # Rate limit to prevent abuse
 @app.route('/register', methods=['GET', 'POST'])
 def register_page():
     form = RegistrationForm()
+    message = ''
     if form.validate_on_submit(): # If the form is submitted
         client_id = form.client_id.data
         password = form.password.data
@@ -168,77 +250,95 @@ def register_page():
                 # Authenticate the client
                 if not bcrypt.checkpw(password.encode('utf-8'), clients[client_id]['password']):
                     message = 'Authentication failed.'
+                    logging.warning(f"Failed login attempt for user '{client_id}' from IP {request.remote_addr}")
                     return render_template('register.html', form=form, message=message)
                 else:
                     # Increment the number of connections
                     clients[client_id]['connections'] += 1
+                    logging.info(f"User '{client_id}' logged in successfully from IP {request.remote_addr}")
                     message = 'Logged in successfully.'
             else:
                 # Else register the client
                 clients[client_id] = {'password': hashed_password, 'counter': 0, 'connections': 1}
+                logging.info(f"User '{client_id}' registered successfully from IP {request.remote_addr}")
                 message = 'Registered successfully.'
 
-        # Store the client ID and message in the session
-        session['client_id'] = client_id
-        session['message'] = message
-        return redirect(url_for('perform_action'))
+        token = generate_token(client_id)
+        response = redirect(url_for('perform_action'))
+        response.set_cookie('token', token, httponly=True, secure=True, samesite='Lax')
+        return response
 
-    return render_template('register.html', form=form)
+    return render_template('register.html', form=form, message=message)
 
-# Allow users to perform actions via the API (cmd json format)
 @app.route('/action', methods=['POST'])
-def action():
-    data = request.get_json()
-    client_id = data.get('id')
-    password = data.get('password')
-    action_cmd = data.get('action')
+@limiter.limit("10 per minute")
+@csrf.exempt
+@token_required
+def action(client_id):
+    try:
+        data = request.get_json()
+        if not data or 'action' not in data:
+            logging.warning(f"Action missing in request from client '{client_id}'")
+            return jsonify({'status': 'error', 'message': 'No action provided'}), 400
 
-    with lock:
-        # Authenticate client
-        client = clients.get(client_id)
-        if not client or not bcrypt.checkpw(password.encode('utf-8'), client['password']):
-            return jsonify({'status': 'error', 'message': 'Authentication failed'}), 403
+        action_cmd = data.get('action')
+        logging.debug(f"Client '{client_id}' requested action: {action_cmd}")
 
         # Parse and perform the action
         command, amount = parse_action(action_cmd)
         if command:
-            if command == 'INCREASE':
-                client['counter'] += amount
-            elif command == 'DECREASE':
-                client['counter'] -= amount
+            with lock:
+                client = clients.get(client_id)
+                if client is None:
+                    logging.error(f"Client '{client_id}' not found during action processing.")
+                    return jsonify({'status': 'error', 'message': 'Client not found'}), 404
+                if command == 'INCREASE':
+                    client['counter'] += amount
+                elif command == 'DECREASE':
+                    client['counter'] -= amount
 
-            # Log the action
-            logging.info(f"Client {client_id}: {action_cmd}. New counter value: {client['counter']}")
+                logging.info(f"Client '{client_id}' performed action '{action_cmd}'. New counter value: {client['counter']}")
 
-            return jsonify({'status': 'success', 'new_value': client['counter']}), 200
+                return jsonify({'status': 'success', 'new_value': client['counter']}), 200
         else:
+            logging.warning(f"Invalid action format from client '{client_id}': {action_cmd}")
             return jsonify({'status': 'error', 'message': 'Invalid action format'}), 400
+    except Exception as e:
+        logging.error(f"Exception in /action route for client '{client_id}': {e}")
+        return jsonify({'status': 'error', 'message': 'Server error occurred'}), 500
+
+    
 
 # Allow users to perform actions via the website
+@limiter.limit("10 per minute")
 @app.route('/perform_action', methods=['GET', 'POST'])
 def perform_action():
-    # Check if the client is registered
-    client_id = session.get('client_id')
-    if not client_id or client_id not in clients:
+    client_id = get_client_id_from_token()
+    if not client_id:
         return redirect(url_for('register_page'))
 
     form = ActionForm()
     message = ''
-    counter_value = clients[client_id]['counter']
+    with lock:
+        counter_value = clients[client_id]['counter']
 
     if form.validate_on_submit():
         if form.submit.data:
             # Action submission
             action_cmd = form.action_cmd.data.strip()
             command, amount = parse_action(action_cmd)
-            with lock:
-                if command == 'INCREASE':
-                    clients[client_id]['counter'] += amount
-                elif command == 'DECREASE':
-                    clients[client_id]['counter'] -= amount
-                logging.info(f"Client {client_id}: {action_cmd}. New counter value: {clients[client_id]['counter']}")
-                counter_value = clients[client_id]['counter']
+            if command:
+                with lock:
+                    if command == 'INCREASE':
+                        clients[client_id]['counter'] += amount
+                    elif command == 'DECREASE':
+                        clients[client_id]['counter'] -= amount
+                    counter_value = clients[client_id]['counter']
+
+                logging.info(f"Client '{client_id}' performed action '{action_cmd}'. New counter value: {counter_value}")
                 message = f"Action '{action_cmd}' performed. New counter value: {counter_value}"
+            else:
+                message = 'Invalid action format.'
         elif form.logout.data:
             # Logout button clicked
             return redirect(url_for('logout'))
@@ -248,10 +348,11 @@ def perform_action():
 
     return render_template('actions.html', form=form, message=message, counter_value=counter_value)
 
+
 # Log out the user and clear the session
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
-    client_id = session.get('client_id')
+    client_id = get_client_id_from_token()
     if not client_id:
         return redirect(url_for('register_page'))
 
@@ -259,10 +360,15 @@ def logout():
         client = clients.get(client_id)
         if client:
             client['connections'] -= 1 # Decrement the number of connections
+            logging.info(f"User '{client_id}' logged out. Remaining connections: {client['connections']}")
             if client['connections'] <= 0: # If no active connections delete the client
                 del clients[client_id]
-    session.clear() # Clear the session
-    return redirect(url_for('register_page'))
+                logging.info(f"All sessions for user '{client_id}' have ended. User data deleted.")
+    
+    # Clear the token cookie
+    response = redirect(url_for('register_page'))
+    response.delete_cookie('token')
+    return response
 
 
 @app.route('/status', methods=['GET'])
