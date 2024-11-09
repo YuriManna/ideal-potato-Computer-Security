@@ -493,3 +493,526 @@ TypeError: 'NoneType' object is not subscriptable
 2024-11-09 17:57:47,918 127.0.0.1 - - [09/Nov/2024 17:57:47] "POST /action HTTP/1.1" 200 -
 2024-11-09 17:58:20,891 127.0.0.1 - - [09/Nov/2024 17:58:20] "POST /logout HTTP/1.1" 200 -
 2024-11-09 17:58:37,960 127.0.0.1 - - [09/Nov/2024 17:58:37] "POST /logout HTTP/1.1" 200 -
+2024-11-09 18:17:49,622  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-09 18:17:49,622  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-09 18:18:00,538 127.0.0.1 - - [09/Nov/2024 18:18:00] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 18:18:00,584 127.0.0.1 - - [09/Nov/2024 18:18:00] "GET /status HTTP/1.1" 200 -
+2024-11-09 18:18:00,850 127.0.0.1 - - [09/Nov/2024 18:18:00] "GET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1" 200 -
+2024-11-09 18:18:05,686 127.0.0.1 - - [09/Nov/2024 18:18:05] "GET /register HTTP/1.1" 200 -
+2024-11-09 18:18:05,793 127.0.0.1 - - [09/Nov/2024 18:18:05] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 18:18:12,857 Exception on /api/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 54, in register
+    client_id = data.get('id')
+                ^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2024-11-09 18:18:12,861 127.0.0.1 - - [09/Nov/2024 18:18:12] "[35m[1mPOST /api/register HTTP/1.1[0m" 500 -
+2024-11-09 18:19:04,044 127.0.0.1 - - [09/Nov/2024 18:19:04] "POST /api/register HTTP/1.1" 200 -
+2024-11-09 18:19:06,133 Client client1: INCREASE 10. New counter value: 10
+2024-11-09 18:19:06,133 127.0.0.1 - - [09/Nov/2024 18:19:06] "POST /action HTTP/1.1" 200 -
+2024-11-09 18:19:08,197 Client client1: DECREASE 5. New counter value: 5
+2024-11-09 18:19:08,197 127.0.0.1 - - [09/Nov/2024 18:19:08] "POST /action HTTP/1.1" 200 -
+2024-11-09 18:19:10,283 Client client1: INCREASE 15. New counter value: 20
+2024-11-09 18:19:10,283 127.0.0.1 - - [09/Nov/2024 18:19:10] "POST /action HTTP/1.1" 200 -
+2024-11-09 19:03:40,186  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-09 19:03:40,186  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-09 19:03:50,886 Exception on /api/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 132, in register
+    client_id = data.get('id')
+                ^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2024-11-09 19:03:50,889 127.0.0.1 - - [09/Nov/2024 19:03:50] "[35m[1mPOST /api/register HTTP/1.1[0m" 500 -
+2024-11-09 19:03:58,747 127.0.0.1 - - [09/Nov/2024 19:03:58] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:03:58,922 127.0.0.1 - - [09/Nov/2024 19:03:58] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 19:04:26,990 127.0.0.1 - - [09/Nov/2024 19:04:26] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:04:27,015 127.0.0.1 - - [09/Nov/2024 19:04:27] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:04:27,159 127.0.0.1 - - [09/Nov/2024 19:04:27] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:04:47,304 Client user1: INCREASE 10. New counter value: 10
+2024-11-09 19:04:47,305 127.0.0.1 - - [09/Nov/2024 19:04:47] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:04:47,387 127.0.0.1 - - [09/Nov/2024 19:04:47] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:04:57,666 Client user1: DECREASE 5. New counter value: 5
+2024-11-09 19:04:57,667 127.0.0.1 - - [09/Nov/2024 19:04:57] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:04:57,746 127.0.0.1 - - [09/Nov/2024 19:04:57] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:05:11,032 Client user1: INCREASE 100. New counter value: 105
+2024-11-09 19:05:11,033 127.0.0.1 - - [09/Nov/2024 19:05:11] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:05:11,114 127.0.0.1 - - [09/Nov/2024 19:05:11] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:05:18,407 Client user1: DECREASE 500. New counter value: -395
+2024-11-09 19:05:18,407 127.0.0.1 - - [09/Nov/2024 19:05:18] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:05:18,494 127.0.0.1 - - [09/Nov/2024 19:05:18] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:05:21,755 127.0.0.1 - - [09/Nov/2024 19:05:21] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:05:21,839 127.0.0.1 - - [09/Nov/2024 19:05:21] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:05:23,424 127.0.0.1 - - [09/Nov/2024 19:05:23] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:05:23,512 127.0.0.1 - - [09/Nov/2024 19:05:23] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:05:31,986 127.0.0.1 - - [09/Nov/2024 19:05:31] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-09 19:05:31,995 127.0.0.1 - - [09/Nov/2024 19:05:31] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-09 19:05:32,011 127.0.0.1 - - [09/Nov/2024 19:05:32] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:05:32,183 127.0.0.1 - - [09/Nov/2024 19:05:32] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 19:06:23,165 127.0.0.1 - - [09/Nov/2024 19:06:23] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:06:23,177 127.0.0.1 - - [09/Nov/2024 19:06:23] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:06:23,332 127.0.0.1 - - [09/Nov/2024 19:06:23] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:06:29,326 127.0.0.1 - - [09/Nov/2024 19:06:29] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:06:29,427 127.0.0.1 - - [09/Nov/2024 19:06:29] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 19:06:51,115 127.0.0.1 - - [09/Nov/2024 19:06:51] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:06:51,126 127.0.0.1 - - [09/Nov/2024 19:06:51] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:06:51,280 127.0.0.1 - - [09/Nov/2024 19:06:51] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:06:59,640 127.0.0.1 - - [09/Nov/2024 19:06:59] "POST /register HTTP/1.1" 200 -
+2024-11-09 19:06:59,721 127.0.0.1 - - [09/Nov/2024 19:06:59] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 19:07:02,923 127.0.0.1 - - [09/Nov/2024 19:07:02] "POST /register HTTP/1.1" 200 -
+2024-11-09 19:07:03,003 127.0.0.1 - - [09/Nov/2024 19:07:03] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 19:07:05,532 127.0.0.1 - - [09/Nov/2024 19:07:05] "POST /register HTTP/1.1" 200 -
+2024-11-09 19:07:05,612 127.0.0.1 - - [09/Nov/2024 19:07:05] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 19:07:17,646 127.0.0.1 - - [09/Nov/2024 19:07:17] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:07:17,659 127.0.0.1 - - [09/Nov/2024 19:07:17] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:07:17,795 127.0.0.1 - - [09/Nov/2024 19:07:17] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:07:26,637 127.0.0.1 - - [09/Nov/2024 19:07:26] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:07:26,745 127.0.0.1 - - [09/Nov/2024 19:07:26] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 19:07:32,163 127.0.0.1 - - [09/Nov/2024 19:07:32] "POST /register HTTP/1.1" 200 -
+2024-11-09 19:07:32,246 127.0.0.1 - - [09/Nov/2024 19:07:32] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 19:07:39,187 127.0.0.1 - - [09/Nov/2024 19:07:39] "POST /register HTTP/1.1" 200 -
+2024-11-09 19:07:39,272 127.0.0.1 - - [09/Nov/2024 19:07:39] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 19:07:42,719 127.0.0.1 - - [09/Nov/2024 19:07:42] "POST /register HTTP/1.1" 200 -
+2024-11-09 19:07:42,807 127.0.0.1 - - [09/Nov/2024 19:07:42] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 19:07:45,080 127.0.0.1 - - [09/Nov/2024 19:07:45] "POST /register HTTP/1.1" 200 -
+2024-11-09 19:07:45,163 127.0.0.1 - - [09/Nov/2024 19:07:45] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 19:07:49,484 127.0.0.1 - - [09/Nov/2024 19:07:49] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:07:49,496 127.0.0.1 - - [09/Nov/2024 19:07:49] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:07:49,631 127.0.0.1 - - [09/Nov/2024 19:07:49] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:07:54,089 127.0.0.1 - - [09/Nov/2024 19:07:54] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:07:54,184 127.0.0.1 - - [09/Nov/2024 19:07:54] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 19:08:00,082 127.0.0.1 - - [09/Nov/2024 19:08:00] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:08:00,093 127.0.0.1 - - [09/Nov/2024 19:08:00] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:08:00,242 127.0.0.1 - - [09/Nov/2024 19:08:00] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:08:05,432 127.0.0.1 - - [09/Nov/2024 19:08:05] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:08:05,521 127.0.0.1 - - [09/Nov/2024 19:08:05] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:08:09,784 Client user1: INCREASE 10. New counter value: 10
+2024-11-09 19:08:09,785 127.0.0.1 - - [09/Nov/2024 19:08:09] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:08:09,879 127.0.0.1 - - [09/Nov/2024 19:08:09] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:08:14,019 Client user1: DECREASE 5. New counter value: 5
+2024-11-09 19:08:14,019 127.0.0.1 - - [09/Nov/2024 19:08:14] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:08:14,099 127.0.0.1 - - [09/Nov/2024 19:08:14] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:08:18,311 Client user1: DECREASE 15. New counter value: -10
+2024-11-09 19:08:18,312 127.0.0.1 - - [09/Nov/2024 19:08:18] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:08:18,399 127.0.0.1 - - [09/Nov/2024 19:08:18] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:08:21,146 Client user1: INCREASE 10. New counter value: 0
+2024-11-09 19:08:21,147 127.0.0.1 - - [09/Nov/2024 19:08:21] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:08:21,224 127.0.0.1 - - [09/Nov/2024 19:08:21] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:21:51,112  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-09 19:21:51,113  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-09 19:21:56,518 127.0.0.1 - - [09/Nov/2024 19:21:56] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:21:56,708 127.0.0.1 - - [09/Nov/2024 19:21:56] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 19:22:02,814 127.0.0.1 - - [09/Nov/2024 19:22:02] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:22:02,831 127.0.0.1 - - [09/Nov/2024 19:22:02] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:22:02,973 127.0.0.1 - - [09/Nov/2024 19:22:02] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:22:11,125 Client ahoj: INCREASE 500. New counter value: 500
+2024-11-09 19:22:11,126 127.0.0.1 - - [09/Nov/2024 19:22:11] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:22:11,208 127.0.0.1 - - [09/Nov/2024 19:22:11] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:22:15,121 127.0.0.1 - - [09/Nov/2024 19:22:15] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:22:15,217 127.0.0.1 - - [09/Nov/2024 19:22:15] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 19:22:21,914 127.0.0.1 - - [09/Nov/2024 19:22:21] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:22:21,926 127.0.0.1 - - [09/Nov/2024 19:22:21] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:22:22,072 127.0.0.1 - - [09/Nov/2024 19:22:22] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:22:27,144 Client ahoj: DECREASE 50. New counter value: 450
+2024-11-09 19:22:27,144 127.0.0.1 - - [09/Nov/2024 19:22:27] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:22:27,225 127.0.0.1 - - [09/Nov/2024 19:22:27] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:22:28,734 127.0.0.1 - - [09/Nov/2024 19:22:28] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-09 19:22:28,743 127.0.0.1 - - [09/Nov/2024 19:22:28] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-09 19:22:28,765 127.0.0.1 - - [09/Nov/2024 19:22:28] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:22:28,927 127.0.0.1 - - [09/Nov/2024 19:22:28] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 19:22:34,351 127.0.0.1 - - [09/Nov/2024 19:22:34] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-09 19:22:34,362 127.0.0.1 - - [09/Nov/2024 19:22:34] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:22:34,502 127.0.0.1 - - [09/Nov/2024 19:22:34] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 19:22:49,045 127.0.0.1 - - [09/Nov/2024 19:22:49] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:22:49,058 127.0.0.1 - - [09/Nov/2024 19:22:49] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:22:49,223 127.0.0.1 - - [09/Nov/2024 19:22:49] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:23:01,714 127.0.0.1 - - [09/Nov/2024 19:23:01] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:23:01,724 127.0.0.1 - - [09/Nov/2024 19:23:01] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:23:01,876 127.0.0.1 - - [09/Nov/2024 19:23:01] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:23:08,012 Client ahoj: DECREASE 50. New counter value: 400
+2024-11-09 19:23:08,013 127.0.0.1 - - [09/Nov/2024 19:23:08] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:23:08,100 127.0.0.1 - - [09/Nov/2024 19:23:08] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:23:09,412 Client ahoj: DECREASE 50. New counter value: 350
+2024-11-09 19:23:09,412 127.0.0.1 - - [09/Nov/2024 19:23:09] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:23:09,490 127.0.0.1 - - [09/Nov/2024 19:23:09] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:23:09,868 Client ahoj: DECREASE 50. New counter value: 300
+2024-11-09 19:23:09,869 127.0.0.1 - - [09/Nov/2024 19:23:09] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:23:09,953 127.0.0.1 - - [09/Nov/2024 19:23:09] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:23:10,986 127.0.0.1 - - [09/Nov/2024 19:23:10] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-09 19:23:10,997 127.0.0.1 - - [09/Nov/2024 19:23:10] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-09 19:23:11,018 127.0.0.1 - - [09/Nov/2024 19:23:11] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:23:11,180 127.0.0.1 - - [09/Nov/2024 19:23:11] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 19:23:16,482 127.0.0.1 - - [09/Nov/2024 19:23:16] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:23:16,493 127.0.0.1 - - [09/Nov/2024 19:23:16] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:23:16,620 127.0.0.1 - - [09/Nov/2024 19:23:16] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:28:22,004  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-09 19:28:22,004  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-09 19:28:30,785 127.0.0.1 - - [09/Nov/2024 19:28:30] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:28:30,946 127.0.0.1 - - [09/Nov/2024 19:28:30] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 19:28:36,283 127.0.0.1 - - [09/Nov/2024 19:28:36] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:28:36,300 127.0.0.1 - - [09/Nov/2024 19:28:36] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:28:36,468 127.0.0.1 - - [09/Nov/2024 19:28:36] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:28:41,154 127.0.0.1 - - [09/Nov/2024 19:28:41] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:28:41,166 127.0.0.1 - - [09/Nov/2024 19:28:41] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:28:41,316 127.0.0.1 - - [09/Nov/2024 19:28:41] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:28:47,262 Client ahoj: INCREASE 10. New counter value: 10
+2024-11-09 19:28:47,263 127.0.0.1 - - [09/Nov/2024 19:28:47] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:28:47,344 127.0.0.1 - - [09/Nov/2024 19:28:47] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:28:52,528 Exception on /perform_action [POST]
+Traceback (most recent call last):
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 242, in perform_action
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_wtf\form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate()
+                                   ^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 105, in validate
+    self.action_cmd.errors.append('This field is required.')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'append'
+2024-11-09 19:28:52,530 127.0.0.1 - - [09/Nov/2024 19:28:52] "[35m[1mPOST /perform_action HTTP/1.1[0m" 500 -
+2024-11-09 19:28:57,317 Exception on /perform_action [POST]
+Traceback (most recent call last):
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 242, in perform_action
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_wtf\form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate()
+                                   ^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 105, in validate
+    self.action_cmd.errors.append('This field is required.')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'append'
+2024-11-09 19:28:57,318 127.0.0.1 - - [09/Nov/2024 19:28:57] "[35m[1mPOST /perform_action HTTP/1.1[0m" 500 -
+2024-11-09 19:29:00,542 Exception on /perform_action [POST]
+Traceback (most recent call last):
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 242, in perform_action
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_wtf\form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate()
+                                   ^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 105, in validate
+    self.action_cmd.errors.append('This field is required.')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'append'
+2024-11-09 19:29:00,543 127.0.0.1 - - [09/Nov/2024 19:29:00] "[35m[1mPOST /perform_action HTTP/1.1[0m" 500 -
+2024-11-09 19:29:04,622 127.0.0.1 - - [09/Nov/2024 19:29:04] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:29:04,726 127.0.0.1 - - [09/Nov/2024 19:29:04] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 19:29:10,616 127.0.0.1 - - [09/Nov/2024 19:29:10] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:29:10,627 127.0.0.1 - - [09/Nov/2024 19:29:10] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:29:10,805 127.0.0.1 - - [09/Nov/2024 19:29:10] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:29:13,281 127.0.0.1 - - [09/Nov/2024 19:29:13] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-09 19:29:13,292 127.0.0.1 - - [09/Nov/2024 19:29:13] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-09 19:29:13,309 127.0.0.1 - - [09/Nov/2024 19:29:13] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:29:13,500 127.0.0.1 - - [09/Nov/2024 19:29:13] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 19:29:17,363 127.0.0.1 - - [09/Nov/2024 19:29:17] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:29:17,374 127.0.0.1 - - [09/Nov/2024 19:29:17] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:29:17,550 127.0.0.1 - - [09/Nov/2024 19:29:17] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:29:20,182 Exception on /perform_action [POST]
+Traceback (most recent call last):
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 242, in perform_action
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_wtf\form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate()
+                                   ^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 105, in validate
+    self.action_cmd.errors.append('This field is required.')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'append'
+2024-11-09 19:29:20,184 127.0.0.1 - - [09/Nov/2024 19:29:20] "[35m[1mPOST /perform_action HTTP/1.1[0m" 500 -
+2024-11-09 19:35:41,218  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-09 19:35:41,218  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-09 19:35:51,689 127.0.0.1 - - [09/Nov/2024 19:35:51] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:35:51,875 127.0.0.1 - - [09/Nov/2024 19:35:51] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 19:35:56,789 127.0.0.1 - - [09/Nov/2024 19:35:56] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:35:56,823 127.0.0.1 - - [09/Nov/2024 19:35:56] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:35:56,971 127.0.0.1 - - [09/Nov/2024 19:35:56] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:36:00,066 127.0.0.1 - - [09/Nov/2024 19:36:00] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:36:00,153 127.0.0.1 - - [09/Nov/2024 19:36:00] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:36:04,454 Exception on /perform_action [POST]
+Traceback (most recent call last):
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 242, in perform_action
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_wtf\form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate()
+                                   ^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 105, in validate
+    self.action_cmd.errors.append('This field is required.')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'append'
+2024-11-09 19:36:04,456 127.0.0.1 - - [09/Nov/2024 19:36:04] "[35m[1mPOST /perform_action HTTP/1.1[0m" 500 -
+2024-11-09 19:36:24,218 127.0.0.1 - - [09/Nov/2024 19:36:24] "GET /register HTTP/1.1" 200 -
+2024-11-09 19:36:24,323 127.0.0.1 - - [09/Nov/2024 19:36:24] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 19:36:31,790 127.0.0.1 - - [09/Nov/2024 19:36:31] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 19:36:31,802 127.0.0.1 - - [09/Nov/2024 19:36:31] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:36:31,985 127.0.0.1 - - [09/Nov/2024 19:36:31] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:36:33,783 127.0.0.1 - - [09/Nov/2024 19:36:33] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 19:36:54,723 127.0.0.1 - - [09/Nov/2024 19:36:54] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 19:36:54,825 127.0.0.1 - - [09/Nov/2024 19:36:54] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 19:36:58,271 Exception on /perform_action [POST]
+Traceback (most recent call last):
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 242, in perform_action
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_wtf\form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate()
+                                   ^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 105, in validate
+    self.action_cmd.errors.append('This field is required.')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'append'
+2024-11-09 19:36:58,272 127.0.0.1 - - [09/Nov/2024 19:36:58] "[35m[1mPOST /perform_action HTTP/1.1[0m" 500 -
+2024-11-09 20:56:15,696  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-09 20:56:15,696  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-09 20:56:35,641 127.0.0.1 - - [09/Nov/2024 20:56:35] "GET /register HTTP/1.1" 200 -
+2024-11-09 20:56:35,843 127.0.0.1 - - [09/Nov/2024 20:56:35] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 20:56:40,882 127.0.0.1 - - [09/Nov/2024 20:56:40] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 20:56:40,898 127.0.0.1 - - [09/Nov/2024 20:56:40] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 20:56:41,092 127.0.0.1 - - [09/Nov/2024 20:56:41] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 20:56:46,462 Exception on /perform_action [POST]
+Traceback (most recent call last):
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 242, in perform_action
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_wtf\form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate()
+                                   ^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 105, in validate
+    self.action_cmd.errors.append('This field is required.')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'append'
+2024-11-09 20:56:46,464 127.0.0.1 - - [09/Nov/2024 20:56:46] "[35m[1mPOST /perform_action HTTP/1.1[0m" 500 -
+2024-11-09 21:00:02,243  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-09 21:00:02,243  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-09 21:00:06,920 127.0.0.1 - - [09/Nov/2024 21:00:06] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-09 21:00:06,938 127.0.0.1 - - [09/Nov/2024 21:00:06] "GET /register HTTP/1.1" 200 -
+2024-11-09 21:00:07,160 127.0.0.1 - - [09/Nov/2024 21:00:07] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 21:00:10,842 127.0.0.1 - - [09/Nov/2024 21:00:10] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 21:00:10,860 127.0.0.1 - - [09/Nov/2024 21:00:10] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 21:00:11,033 127.0.0.1 - - [09/Nov/2024 21:00:11] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:00:12,652 Exception on /perform_action [POST]
+Traceback (most recent call last):
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 242, in perform_action
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_wtf\form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate()
+                                   ^^^^^^^^^^^^^^^
+  File "c:\Users\Pavel Detvan\OneDrive\Pavel\University\Computer Security\Project\ideal-potato-Computer-Security\server.py", line 105, in validate
+    self.action_cmd.errors.append('This field is required.')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'append'
+2024-11-09 21:00:12,654 127.0.0.1 - - [09/Nov/2024 21:00:12] "[35m[1mPOST /perform_action HTTP/1.1[0m" 500 -
+2024-11-09 21:10:33,645  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-09 21:10:33,645  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-09 21:10:38,371 127.0.0.1 - - [09/Nov/2024 21:10:38] "GET /register HTTP/1.1" 200 -
+2024-11-09 21:10:38,555 127.0.0.1 - - [09/Nov/2024 21:10:38] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 21:10:44,016 127.0.0.1 - - [09/Nov/2024 21:10:44] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 21:10:44,033 127.0.0.1 - - [09/Nov/2024 21:10:44] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 21:10:44,170 127.0.0.1 - - [09/Nov/2024 21:10:44] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:10:50,393 127.0.0.1 - - [09/Nov/2024 21:10:50] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:10:50,482 127.0.0.1 - - [09/Nov/2024 21:10:50] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:10:52,727 127.0.0.1 - - [09/Nov/2024 21:10:52] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:10:52,805 127.0.0.1 - - [09/Nov/2024 21:10:52] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:10:55,619 127.0.0.1 - - [09/Nov/2024 21:10:55] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:10:55,702 127.0.0.1 - - [09/Nov/2024 21:10:55] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:11:02,313 Client yuri: increase 50. New counter value: 50
+2024-11-09 21:11:02,314 127.0.0.1 - - [09/Nov/2024 21:11:02] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:11:02,396 127.0.0.1 - - [09/Nov/2024 21:11:02] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:11:14,872 127.0.0.1 - - [09/Nov/2024 21:11:14] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:11:14,956 127.0.0.1 - - [09/Nov/2024 21:11:14] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:11:18,216 127.0.0.1 - - [09/Nov/2024 21:11:18] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:11:18,298 127.0.0.1 - - [09/Nov/2024 21:11:18] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:11:26,440 127.0.0.1 - - [09/Nov/2024 21:11:26] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:11:26,517 127.0.0.1 - - [09/Nov/2024 21:11:26] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:11:28,832 127.0.0.1 - - [09/Nov/2024 21:11:28] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:11:28,918 127.0.0.1 - - [09/Nov/2024 21:11:28] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:11:33,298 Client yuri: decrease 50. New counter value: 0
+2024-11-09 21:11:33,298 127.0.0.1 - - [09/Nov/2024 21:11:33] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:11:33,382 127.0.0.1 - - [09/Nov/2024 21:11:33] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:11:35,477 127.0.0.1 - - [09/Nov/2024 21:11:35] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-09 21:11:35,488 127.0.0.1 - - [09/Nov/2024 21:11:35] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-09 21:11:35,506 127.0.0.1 - - [09/Nov/2024 21:11:35] "GET /register HTTP/1.1" 200 -
+2024-11-09 21:11:35,671 127.0.0.1 - - [09/Nov/2024 21:11:35] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 21:40:08,867  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-09 21:40:08,868  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-09 21:40:40,296 127.0.0.1 - - [09/Nov/2024 21:40:40] "GET /register HTTP/1.1" 200 -
+2024-11-09 21:40:40,474 127.0.0.1 - - [09/Nov/2024 21:40:40] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 21:40:58,591 127.0.0.1 - - [09/Nov/2024 21:40:58] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 21:40:58,618 127.0.0.1 - - [09/Nov/2024 21:40:58] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 21:40:58,778 127.0.0.1 - - [09/Nov/2024 21:40:58] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:41:25,869 Client user1: INCREASE 10. New counter value: 10
+2024-11-09 21:41:25,869 127.0.0.1 - - [09/Nov/2024 21:41:25] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:41:25,952 127.0.0.1 - - [09/Nov/2024 21:41:25] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:41:40,408 Client user1: Decrease 10. New counter value: 0
+2024-11-09 21:41:40,408 127.0.0.1 - - [09/Nov/2024 21:41:40] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:41:40,496 127.0.0.1 - - [09/Nov/2024 21:41:40] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:41:51,323 127.0.0.1 - - [09/Nov/2024 21:41:51] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:41:51,399 127.0.0.1 - - [09/Nov/2024 21:41:51] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:41:58,405 127.0.0.1 - - [09/Nov/2024 21:41:58] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:41:58,487 127.0.0.1 - - [09/Nov/2024 21:41:58] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:52:47,570  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-09 21:52:47,571  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-09 21:53:21,207 127.0.0.1 - - [09/Nov/2024 21:53:21] "GET /register HTTP/1.1" 200 -
+2024-11-09 21:53:21,368 127.0.0.1 - - [09/Nov/2024 21:53:21] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 21:53:56,620 127.0.0.1 - - [09/Nov/2024 21:53:56] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 21:53:56,633 127.0.0.1 - - [09/Nov/2024 21:53:56] "GET /perform_action HTTP/1.1" 200 -
+2024-11-09 21:53:56,799 127.0.0.1 - - [09/Nov/2024 21:53:56] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:54:02,333 127.0.0.1 - - [09/Nov/2024 21:54:02] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:54:02,423 127.0.0.1 - - [09/Nov/2024 21:54:02] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:54:04,893 127.0.0.1 - - [09/Nov/2024 21:54:04] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:54:04,978 127.0.0.1 - - [09/Nov/2024 21:54:04] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:54:09,836 Client kokot: decrease 10000. New counter value: -10000
+2024-11-09 21:54:09,836 127.0.0.1 - - [09/Nov/2024 21:54:09] "POST /perform_action HTTP/1.1" 200 -
+2024-11-09 21:54:09,924 127.0.0.1 - - [09/Nov/2024 21:54:09] "[33mGET /static/images/ActionsBK.png HTTP/1.1[0m" 404 -
+2024-11-09 21:54:11,549 127.0.0.1 - - [09/Nov/2024 21:54:11] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-09 21:54:11,563 127.0.0.1 - - [09/Nov/2024 21:54:11] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-09 21:54:11,575 127.0.0.1 - - [09/Nov/2024 21:54:11] "GET /register HTTP/1.1" 200 -
+2024-11-09 21:54:11,763 127.0.0.1 - - [09/Nov/2024 21:54:11] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 21:56:20,084  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-09 21:56:20,084  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-09 22:02:53,017  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-09 22:02:53,018  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-09 22:03:00,803 127.0.0.1 - - [09/Nov/2024 22:03:00] "POST /api/register HTTP/1.1" 200 -
+2024-11-09 22:03:02,025 Client user1: INCREASE 15. New counter value: 15
+2024-11-09 22:03:02,025 127.0.0.1 - - [09/Nov/2024 22:03:02] "POST /action HTTP/1.1" 200 -
+2024-11-09 22:03:03,236 Client user1: DECREASE 5. New counter value: 10
+2024-11-09 22:03:03,236 127.0.0.1 - - [09/Nov/2024 22:03:03] "POST /action HTTP/1.1" 200 -
+2024-11-09 22:03:04,447 Client user1: INCREASE 20. New counter value: 30
+2024-11-09 22:03:04,447 127.0.0.1 - - [09/Nov/2024 22:03:04] "POST /action HTTP/1.1" 200 -
+2024-11-09 22:03:54,460 127.0.0.1 - - [09/Nov/2024 22:03:54] "[32mPOST /logout HTTP/1.1[0m" 302 -
+2024-11-09 22:03:54,478 127.0.0.1 - - [09/Nov/2024 22:03:54] "GET /register HTTP/1.1" 200 -

@@ -1,17 +1,16 @@
 {
-    "id": "client1",
-    "password": "kokot123",
-    "server": {
+  "id": "user1",
+  "password": "password123",
+  "server": {
       "ip": "127.0.0.1",
-      "port": "5000"
-    },
-    "actions": {
-      "delay": "2",
+      "port": 5000
+  },
+  "actions": {
+      "delay": "1",
       "steps": [
-        "INCREASE 10",
-        "DECREASE 5",
-        "INCREASE 15"
+          "INCREASE 15",
+          "DECREASE 5",
+          "INCREASE 20"
       ]
-    }
   }
-  
+}

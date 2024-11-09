@@ -1,9 +1,9 @@
-<!--UI for registration and login-->
+<!---UI for performing actions and log out-->
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Register</title>
+    <title>Perform Actions</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,21 +12,27 @@
             background-position: center;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             height: 100vh;
             margin: 0;
+            padding-top: 50px;
         }
         .container {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 400px;
             text-align: center;
         }
         .container h2 {
             margin-bottom: 20px;
             color: #333;
+        }
+        .container p {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 20px;
         }
         .container label {
             display: block;
@@ -34,8 +40,7 @@
             color: #555;
             text-align: left;
         }
-        .container input[type="text"],
-        .container input[type="password"] {
+        .container input[type="text"] {
             width: 80%;
             padding: 10px;
             margin-bottom: 15px;
@@ -43,7 +48,7 @@
             border-radius: 4px;
         }
         .container input[type="submit"] {
-            width: 80%;
+            width: 35%;
             padding: 10px;
             background-color: #FF6200;
             border: none;
@@ -51,36 +56,46 @@
             color: white;
             font-size: 16px;
             cursor: pointer;
+            margin: 5px;
         }
         .container input[type="submit"]:hover {
             background-color: #0056b3;
         }
         .message {
-            color: red;
+            color: green;
             margin-top: 10px;
+        }
+        .error-message {
+            color: red;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            text-align: left;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Register/Login</h2>
-        <form method="POST" action="{{ url_for('register_page') }}">
-            {{ form.hidden_tag() }} <!-- Hidden field that Flask-WTF uses to protect against CSRF attacks. -->
-            <label for="client_id">Username:</label>
-            {{ form.client_id(size=32) }}
-            <label for="password">Password:</label>
-            {{ form.password(size=32) }}
+        <h2>Perform Actions</h2>
+        <!---Counter value-->
+        <p>Current counter value: {{ counter_value }}</p>
+        <form method="POST" action="{{ url_for('perform_action') }}">
+            {{ form.hidden_tag() }}
+            <label for="action_cmd">Action:</label>
+            {{ form.action_cmd(size=32) }}
+            {% if form.action_cmd.errors %}
+                <div class="error-message">
+                    {{ form.action_cmd.errors[0] }}
+                </div>
+            {% endif %}
+            <br>
             {{ form.submit() }}
+            {{ form.logout() }}
         </form>
-        <!-- Display any messages or errors. -->
+        <!---Feedback on action execution and errors-->
         {% if message %}
             <p class="message">{{ message }}</p>
         {% endif %}
-        {% for field in form %}
-            {% for error in field.errors %}
-                <p class="message">{{ error }}</p>
-            {% endfor %}
-        {% endfor %}
     </div>
 </body>
 </html>
