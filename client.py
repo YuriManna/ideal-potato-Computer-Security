@@ -29,7 +29,7 @@ def main(config):
 
     # Register with the server
     data = {'id': client_id, 'password': password}
-    response = session.post(f"{server_url}/register", json=data)
+    response = session.post(f"{server_url}/api/register", json=data)
     if response.status_code == 200:
         print(f"Client {client_id}: Registered successfully.")
     else:
@@ -47,6 +47,8 @@ def main(config):
         else:
             print(f"Client {client_id}: Action failed - {response.json()['message']}")
 
+    time.sleep(50) 
+
     # Log out from the server
     response = session.post(f"{server_url}/logout", json=data)
     if response.status_code == 200:
@@ -62,4 +64,3 @@ if __name__ == '__main__':
     config_file = sys.argv[1]
     config = load_config(config_file)
     main(config)
-

@@ -5,7 +5,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('/static/images/RegisterBK.png'); /* Add your background image here */
+            background-image: url('/static/images/RegisterBK.png');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -62,7 +62,7 @@
 <body>
     <div class="container">
         <h2>Register</h2>
-        <form action="/register" method="post">
+        <form action="/api/register" method="post">
             <label for="id">Username:</label>
             <input type="text" id="id" name="id" required>
             <label for="password">Password:</label>

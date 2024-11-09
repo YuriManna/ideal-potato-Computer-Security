@@ -23,10 +23,10 @@
  * Running on http://127.0.0.1:5000
  * Running on http://145.127.43.228:5000
 2024-11-08 19:28:18,042 [33mPress CTRL+C to quit[0m
-2024-11-08 19:28:34,019 127.0.0.1 - - [08/Nov/2024 19:28:34] code 400, message Bad request version ('0\x16»\xa1\xb30T%\xfe\xc5~\xf5d\x8d«\x11\x1b\x95\\\xca!0\x91\x89÷h\xff)uQ¤b\x04Â\x8d\x04%\xa3C\x91\x84¤\x93\x1a\x8a\x12\xbep\x88\xb3\x9f\xe8$ó\xecs3\x8ah\x84q\x13\xe5kÄE\x17\x92T*Ff')
-2024-11-08 19:28:34,019 127.0.0.1 - - [08/Nov/2024 19:28:34] "[31m[1m\x16\x03\x01\x06\xc0\x01\x00\x06\xbc\x03\x03\x9b;\x87ók\xe3\xe6\x1fR\xf8\xc3Se\x95\xb9\x87\xc5\x15\x91\xc0Ý%\xe0ôB\xe5\x18T|ó\x0fë \x91"\xb3mI.y\x16\x86/=\xc5\x93ö'\x81s\xbe=«¨P@ä\x81\x0fI\xa2\xb2í\x96L\x00 \xea\xea\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc©\xcc¨\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SZZ\x00\x00\xfe\x0d\x00Ú\x00\x00\x01\x00\x01\x80\x00 H!\xe8î\x1f\x98çr4\x08\x979±]!\x0d\x91\x86\x04\x83m\xec{×\x89<l\xaa}\x0b\x1aY\x00°\x0e\x7f\x0d×\x1b\xca\x83¬4ýr\xe5\xf5}\x15Ö/Úë\xf0\x88\x05Î\x8c81á´@¸hu\x1e#G\xf5ô=Bço\xe52k\xbc\xd2©k7\x13ó\xbf×'\x8c\xec+T\x12¶\x03\xc6\xf2\x00\x1dg+{t\xb2\x0c\xe8\xfe\xbc\x0ce\x0c_\x0b\xdb8&\x0e[\x11\xb9%\xe3\xb3\xbfC\x06W\x83\x95¶\x9fT¶z\xd95\xd2Ä\xc3\xb2ó%3\x9d\x9b\x99#{\x08\xaf4eV\x1bé\xa2L\xa2\xcc-óE\xf9\xf8L\xd1^,\x9c\x00;\x1eC\xf2\x8d\xf8/KA\xd50ÚH.@N{\xfbÝ]6\x8c\x1e\x0e\xe5«%\x18\xd1H\xc5\x15â´\xcfú\xcaü\x7f\xeaDi\x00\x05\x00\x03\x02h2\x00\x12\x00\x00\x00+\x00\x07\x06\xba\xba\x03\x04\x03\x03\xff\x01\x00\x01\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04\xef\x04í\xba\xba\x00\x01\x00c\x99\x04\xc0\xbcdµa°d0\x9d4\x02°{\xe8\xb2\x19\x9e\x06A\x8c\xbe-w\x08V3Î\xf0c°\x03Ä\x17\x94\x11V4Ç0Äed\x0c0\x16»\xa1\xb30T%\xfe\xc5~\xf5d\x8d«\x11\x1b\x95\\\xca!0\x91\x89÷h\xff)uQ¤b\x04Â\x8d\x04%\xa3C\x91\x84¤\x93\x1a\x8a\x12\xbep\x88\xb3\x9f\xe8$ó\xecs3\x8ah\x84q\x13\xe5kÄE\x17\x92T*Ff[0m" 400 -
-2024-11-08 19:28:34,021 127.0.0.1 - - [08/Nov/2024 19:28:34] code 400, message Bad request version ('::\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc©\xcc¨\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s')
-2024-11-08 19:28:34,021 127.0.0.1 - - [08/Nov/2024 19:28:34] "[31m[1m\x16\x03\x01\x06\xe0\x01\x00\x06Ü\x03\x03<¤\x81\x07Z\x82\x12éP°\xbd\xc3s ¨Ká\xec4u~\xc0\x9d÷e\xe3\x14\x82Dç\\× \x1f|GúG\xe5\xe5\x9c\xff*\xde\x8dP\x87P\x87ßÜ¶\xbd©\xcc?\xaf6\x90\x02×r\xe0\xcfÁ\x00 ::\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc©\xcc¨\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s[0m" 400 -
+2024-11-08 19:28:34,019 127.0.0.1 - - [08/Nov/2024 19:28:34] code 400, message Bad request version ('0\x16ï¿½\xa1\xb30T%\xfe\xc5~\xf5d\x8dï¿½\x11\x1b\x95\\\xca!0\x91\x89ï¿½h\xff)uQï¿½b\x04ï¿½\x8d\x04%\xa3C\x91\x84ï¿½\x93\x1a\x8a\x12\xbep\x88\xb3\x9f\xe8$ï¿½\xecs3\x8ah\x84q\x13\xe5kï¿½E\x17\x92T*Ff')
+2024-11-08 19:28:34,019 127.0.0.1 - - [08/Nov/2024 19:28:34] "[31m[1m\x16\x03\x01\x06\xc0\x01\x00\x06\xbc\x03\x03\x9b;\x87ï¿½k\xe3\xe6\x1fR\xf8\xc3Se\x95\xb9\x87\xc5\x15\x91\xc0ï¿½%\xe0ï¿½B\xe5\x18T|ï¿½\x0fï¿½ \x91"\xb3mI.y\x16\x86/=\xc5\x93ï¿½'\x81s\xbe=ï¿½ï¿½P@ï¿½\x81\x0fI\xa2\xb2ï¿½\x96L\x00 \xea\xea\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xccï¿½\xccï¿½\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SZZ\x00\x00\xfe\x0d\x00ï¿½\x00\x00\x01\x00\x01\x80\x00 H!\xe8ï¿½\x1f\x98ï¿½r4\x08\x979ï¿½]!\x0d\x91\x86\x04\x83m\xec{ï¿½\x89<l\xaa}\x0b\x1aY\x00ï¿½\x0e\x7f\x0dï¿½\x1b\xca\x83ï¿½4ï¿½r\xe5\xf5}\x15ï¿½/ï¿½ï¿½\xf0\x88\x05ï¿½\x8c81ï¿½@ï¿½hu\x1e#G\xf5ï¿½=Bï¿½o\xe52k\xbc\xd2ï¿½k7\x13ï¿½\xbfï¿½'\x8c\xec+T\x12ï¿½\x03\xc6\xf2\x00\x1dg+{t\xb2\x0c\xe8\xfe\xbc\x0ce\x0c_\x0b\xdb8&\x0e[\x11\xb9%\xe3\xb3\xbfC\x06W\x83\x95ï¿½\x9fTï¿½z\xd95\xd2ï¿½\xc3\xb2ï¿½%3\x9d\x9b\x99#{\x08\xaf4eV\x1bï¿½\xa2L\xa2\xcc-ï¿½E\xf9\xf8L\xd1^,\x9c\x00;\x1eC\xf2\x8d\xf8/KA\xd50ï¿½H.@N{\xfbï¿½]6\x8c\x1e\x0e\xe5ï¿½%\x18\xd1H\xc5\x15ï¿½\xcfï¿½\xcaï¿½\x7f\xeaDi\x00\x05\x00\x03\x02h2\x00\x12\x00\x00\x00+\x00\x07\x06\xba\xba\x03\x04\x03\x03\xff\x01\x00\x01\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04\xef\x04ï¿½\xba\xba\x00\x01\x00c\x99\x04\xc0\xbcdï¿½aï¿½d0\x9d4\x02ï¿½{\xe8\xb2\x19\x9e\x06A\x8c\xbe-w\x08V3ï¿½\xf0cï¿½\x03ï¿½\x17\x94\x11V4ï¿½0ï¿½ed\x0c0\x16ï¿½\xa1\xb30T%\xfe\xc5~\xf5d\x8dï¿½\x11\x1b\x95\\\xca!0\x91\x89ï¿½h\xff)uQï¿½b\x04ï¿½\x8d\x04%\xa3C\x91\x84ï¿½\x93\x1a\x8a\x12\xbep\x88\xb3\x9f\xe8$ï¿½\xecs3\x8ah\x84q\x13\xe5kï¿½E\x17\x92T*Ff[0m" 400 -
+2024-11-08 19:28:34,021 127.0.0.1 - - [08/Nov/2024 19:28:34] code 400, message Bad request version ('::\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xccï¿½\xccï¿½\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s')
+2024-11-08 19:28:34,021 127.0.0.1 - - [08/Nov/2024 19:28:34] "[31m[1m\x16\x03\x01\x06\xe0\x01\x00\x06ï¿½\x03\x03<ï¿½\x81\x07Z\x82\x12ï¿½Pï¿½\xbd\xc3s ï¿½Kï¿½\xec4u~\xc0\x9dï¿½e\xe3\x14\x82Dï¿½\\ï¿½ \x1f|Gï¿½G\xe5\xe5\x9c\xff*\xde\x8dP\x87P\x87ï¿½Ü¶\xbdï¿½\xcc?\xaf6\x90\x02ï¿½r\xe0\xcfï¿½\x00 ::\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xccï¿½\xccï¿½\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s[0m" 400 -
 2024-11-08 19:29:31,114 Exception on /status [GET]
 Traceback (most recent call last):
   File "C:\Users\Pavel Detvan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
@@ -240,3 +240,256 @@ jinja2.exceptions.TemplateNotFound: status.html
 2024-11-09 15:57:31,619 [33mPress CTRL+C to quit[0m
 2024-11-09 15:57:35,704 127.0.0.1 - - [09/Nov/2024 15:57:35] "GET /register HTTP/1.1" 200 -
 2024-11-09 15:57:35,815 127.0.0.1 - - [09/Nov/2024 15:57:35] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 16:05:31,589 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 16:05:31,590 [33mPress CTRL+C to quit[0m
+2024-11-09 16:05:34,172 127.0.0.1 - - [09/Nov/2024 16:05:34] "GET /status HTTP/1.1" 200 -
+2024-11-09 16:05:34,282 127.0.0.1 - - [09/Nov/2024 16:05:34] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:05:42,085 127.0.0.1 - - [09/Nov/2024 16:05:42] "POST /register HTTP/1.1" 200 -
+2024-11-09 16:05:42,156 127.0.0.1 - - [09/Nov/2024 16:05:42] "GET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1" 200 -
+2024-11-09 16:06:19,026 127.0.0.1 - - [09/Nov/2024 16:06:19] "GET /register HTTP/1.1" 200 -
+2024-11-09 16:06:19,139 127.0.0.1 - - [09/Nov/2024 16:06:19] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:11:17,360 127.0.0.1 - - [09/Nov/2024 16:11:17] "POST /register HTTP/1.1" 200 -
+2024-11-09 16:11:17,451 127.0.0.1 - - [09/Nov/2024 16:11:17] "[36mGET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 304 -
+2024-11-09 16:11:22,634 127.0.0.1 - - [09/Nov/2024 16:11:22] "GET /register HTTP/1.1" 200 -
+2024-11-09 16:11:22,692 127.0.0.1 - - [09/Nov/2024 16:11:22] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:11:29,823 127.0.0.1 - - [09/Nov/2024 16:11:29] "POST /register HTTP/1.1" 200 -
+2024-11-09 16:11:29,908 127.0.0.1 - - [09/Nov/2024 16:11:29] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:11:41,304 127.0.0.1 - - [09/Nov/2024 16:11:41] "POST /register HTTP/1.1" 200 -
+2024-11-09 16:11:41,400 127.0.0.1 - - [09/Nov/2024 16:11:41] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:11:48,177 127.0.0.1 - - [09/Nov/2024 16:11:48] "POST /register HTTP/1.1" 200 -
+2024-11-09 16:11:48,249 127.0.0.1 - - [09/Nov/2024 16:11:48] "[36mGET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 304 -
+2024-11-09 16:12:15,780 127.0.0.1 - - [09/Nov/2024 16:12:15] "GET /register HTTP/1.1" 200 -
+2024-11-09 16:12:15,854 127.0.0.1 - - [09/Nov/2024 16:12:15] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:12:21,310 127.0.0.1 - - [09/Nov/2024 16:12:21] "POST /register HTTP/1.1" 200 -
+2024-11-09 16:12:21,405 127.0.0.1 - - [09/Nov/2024 16:12:21] "[36mGET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 304 -
+2024-11-09 16:13:09,747 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 16:13:09,747 [33mPress CTRL+C to quit[0m
+2024-11-09 16:13:14,677 127.0.0.1 - - [09/Nov/2024 16:13:14] "GET /status HTTP/1.1" 200 -
+2024-11-09 16:13:14,815 127.0.0.1 - - [09/Nov/2024 16:13:14] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:13:22,524 127.0.0.1 - - [09/Nov/2024 16:13:22] "POST /register HTTP/1.1" 200 -
+2024-11-09 16:13:22,610 127.0.0.1 - - [09/Nov/2024 16:13:22] "[36mGET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 304 -
+2024-11-09 16:13:28,903 127.0.0.1 - - [09/Nov/2024 16:13:28] "GET /register HTTP/1.1" 200 -
+2024-11-09 16:13:28,946 127.0.0.1 - - [09/Nov/2024 16:13:28] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:13:36,054 127.0.0.1 - - [09/Nov/2024 16:13:36] "POST /register HTTP/1.1" 200 -
+2024-11-09 16:13:36,140 127.0.0.1 - - [09/Nov/2024 16:13:36] "[36mGET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 304 -
+2024-11-09 16:22:46,501 127.0.0.1 - - [09/Nov/2024 16:22:46] "GET /register HTTP/1.1" 200 -
+2024-11-09 16:22:46,583 127.0.0.1 - - [09/Nov/2024 16:22:46] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:22:50,888 127.0.0.1 - - [09/Nov/2024 16:22:50] "POST /register HTTP/1.1" 200 -
+2024-11-09 16:22:50,999 127.0.0.1 - - [09/Nov/2024 16:22:50] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:23:58,022 127.0.0.1 - - [09/Nov/2024 16:23:58] "POST /register HTTP/1.1" 200 -
+2024-11-09 16:23:58,100 127.0.0.1 - - [09/Nov/2024 16:23:58] "[36mGET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 304 -
+2024-11-09 16:24:55,409 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 16:24:55,409 [33mPress CTRL+C to quit[0m
+2024-11-09 16:25:00,197 127.0.0.1 - - [09/Nov/2024 16:25:00] "GET /register HTTP/1.1" 200 -
+2024-11-09 16:25:00,326 127.0.0.1 - - [09/Nov/2024 16:25:00] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:25:12,425 127.0.0.1 - - [09/Nov/2024 16:25:12] "POST /register HTTP/1.1" 200 -
+2024-11-09 16:25:12,509 127.0.0.1 - - [09/Nov/2024 16:25:12] "[36mGET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 304 -
+2024-11-09 16:26:13,629 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 16:26:13,629 [33mPress CTRL+C to quit[0m
+2024-11-09 16:26:16,371 127.0.0.1 - - [09/Nov/2024 16:26:16] "GET /register HTTP/1.1" 200 -
+2024-11-09 16:26:16,494 127.0.0.1 - - [09/Nov/2024 16:26:16] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:26:25,241 127.0.0.1 - - [09/Nov/2024 16:26:25] "POST /register HTTP/1.1" 200 -
+2024-11-09 16:26:25,317 127.0.0.1 - - [09/Nov/2024 16:26:25] "[36mGET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 304 -
+2024-11-09 16:26:39,930 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 16:26:39,930 [33mPress CTRL+C to quit[0m
+2024-11-09 16:26:45,032 127.0.0.1 - - [09/Nov/2024 16:26:45] "GET /register HTTP/1.1" 200 -
+2024-11-09 16:26:45,150 127.0.0.1 - - [09/Nov/2024 16:26:45] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:26:49,350 127.0.0.1 - - [09/Nov/2024 16:26:49] "POST /register HTTP/1.1" 200 -
+2024-11-09 16:26:49,427 127.0.0.1 - - [09/Nov/2024 16:26:49] "[36mGET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 304 -
+2024-11-09 16:27:24,529 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 16:27:24,529 [33mPress CTRL+C to quit[0m
+2024-11-09 16:27:28,589 127.0.0.1 - - [09/Nov/2024 16:27:28] "GET /register HTTP/1.1" 200 -
+2024-11-09 16:27:28,722 127.0.0.1 - - [09/Nov/2024 16:27:28] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:27:34,513 127.0.0.1 - - [09/Nov/2024 16:27:34] "POST /register HTTP/1.1" 200 -
+2024-11-09 16:27:34,609 127.0.0.1 - - [09/Nov/2024 16:27:34] "[36mGET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 304 -
+2024-11-09 16:31:15,359 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 16:31:15,359 [33mPress CTRL+C to quit[0m
+2024-11-09 16:31:19,773 127.0.0.1 - - [09/Nov/2024 16:31:19] "GET /status HTTP/1.1" 200 -
+2024-11-09 16:31:19,927 127.0.0.1 - - [09/Nov/2024 16:31:19] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:31:34,058 127.0.0.1 - - [09/Nov/2024 16:31:34] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 16:31:34,084 127.0.0.1 - - [09/Nov/2024 16:31:34] "GET /status?client_id=ioio&message=New+client+registered+successfully. HTTP/1.1" 200 -
+2024-11-09 16:31:34,160 127.0.0.1 - - [09/Nov/2024 16:31:34] "[36mGET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 304 -
+2024-11-09 16:54:38,368 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 16:54:38,368 [33mPress CTRL+C to quit[0m
+2024-11-09 16:56:09,464 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 16:56:09,464 [33mPress CTRL+C to quit[0m
+2024-11-09 16:56:14,082 127.0.0.1 - - [09/Nov/2024 16:56:14] "GET /status HTTP/1.1" 200 -
+2024-11-09 16:56:14,203 127.0.0.1 - - [09/Nov/2024 16:56:14] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-09 16:56:25,863 127.0.0.1 - - [09/Nov/2024 16:56:25] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 16:56:25,890 127.0.0.1 - - [09/Nov/2024 16:56:25] "GET /status HTTP/1.1" 200 -
+2024-11-09 16:56:25,966 127.0.0.1 - - [09/Nov/2024 16:56:25] "[36mGET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 304 -
+2024-11-09 17:03:38,850 127.0.0.1 - - [09/Nov/2024 17:03:38] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 17:03:38,888 127.0.0.1 - - [09/Nov/2024 17:03:38] "GET /status HTTP/1.1" 200 -
+2024-11-09 17:03:40,926 127.0.0.1 - - [09/Nov/2024 17:03:40] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:03:42,963 127.0.0.1 - - [09/Nov/2024 17:03:42] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:03:45,004 127.0.0.1 - - [09/Nov/2024 17:03:45] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:03:45,042 127.0.0.1 - - [09/Nov/2024 17:03:45] "[31m[1mPOST /logout HTTP/1.1[0m" 403 -
+2024-11-09 17:13:43,237 127.0.0.1 - - [09/Nov/2024 17:13:43] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 17:13:43,272 127.0.0.1 - - [09/Nov/2024 17:13:43] "GET /status HTTP/1.1" 200 -
+2024-11-09 17:13:45,310 127.0.0.1 - - [09/Nov/2024 17:13:45] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:13:47,350 127.0.0.1 - - [09/Nov/2024 17:13:47] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:13:49,391 127.0.0.1 - - [09/Nov/2024 17:13:49] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:13:49,428 127.0.0.1 - - [09/Nov/2024 17:13:49] "[31m[1mPOST /logout HTTP/1.1[0m" 403 -
+2024-11-09 17:19:02,814 127.0.0.1 - - [09/Nov/2024 17:19:02] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 17:19:02,846 127.0.0.1 - - [09/Nov/2024 17:19:02] "GET /status HTTP/1.1" 200 -
+2024-11-09 17:19:04,884 127.0.0.1 - - [09/Nov/2024 17:19:04] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:19:06,933 127.0.0.1 - - [09/Nov/2024 17:19:06] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:19:08,973 127.0.0.1 - - [09/Nov/2024 17:19:08] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:19:09,006 127.0.0.1 - - [09/Nov/2024 17:19:09] "[31m[1mPOST /logout HTTP/1.1[0m" 403 -
+2024-11-09 17:20:07,097 127.0.0.1 - - [09/Nov/2024 17:20:07] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 17:20:07,131 127.0.0.1 - - [09/Nov/2024 17:20:07] "GET /status HTTP/1.1" 200 -
+2024-11-09 17:20:09,174 127.0.0.1 - - [09/Nov/2024 17:20:09] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:20:11,209 127.0.0.1 - - [09/Nov/2024 17:20:11] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:20:13,247 127.0.0.1 - - [09/Nov/2024 17:20:13] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:20:13,281 127.0.0.1 - - [09/Nov/2024 17:20:13] "[31m[1mPOST /logout HTTP/1.1[0m" 403 -
+2024-11-09 17:22:34,877 127.0.0.1 - - [09/Nov/2024 17:22:34] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 17:22:34,909 127.0.0.1 - - [09/Nov/2024 17:22:34] "GET /status HTTP/1.1" 200 -
+2024-11-09 17:22:36,949 127.0.0.1 - - [09/Nov/2024 17:22:36] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:22:38,990 127.0.0.1 - - [09/Nov/2024 17:22:38] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:22:41,030 127.0.0.1 - - [09/Nov/2024 17:22:41] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:22:41,068 127.0.0.1 - - [09/Nov/2024 17:22:41] "[31m[1mPOST /logout HTTP/1.1[0m" 403 -
+2024-11-09 17:27:39,930 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 17:27:39,930 [33mPress CTRL+C to quit[0m
+2024-11-09 17:28:05,558 127.0.0.1 - - [09/Nov/2024 17:28:05] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 17:28:05,597 127.0.0.1 - - [09/Nov/2024 17:28:05] "GET /status HTTP/1.1" 200 -
+2024-11-09 17:28:07,631 Exception on /action [POST]
+Traceback (most recent call last):
+  File "C:\Users\yurim\anaconda3\Lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yurim\anaconda3\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yurim\anaconda3\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yurim\anaconda3\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\yurim\Documents\University\UM\Year_3\Period 2\Computer Security\ideal-potato-Computer-Security\server.py", line 81, in action
+    print(f"Authentication failed for client {client}, password {client['password']} correct is {password}")
+                                                                 ~~~~~~^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+2024-11-09 17:28:07,634 127.0.0.1 - - [09/Nov/2024 17:28:07] "[35m[1mPOST /action HTTP/1.1[0m" 500 -
+2024-11-09 17:35:19,649 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 17:35:19,649 [33mPress CTRL+C to quit[0m
+2024-11-09 17:35:29,181 127.0.0.1 - - [09/Nov/2024 17:35:29] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 17:35:29,218 127.0.0.1 - - [09/Nov/2024 17:35:29] "GET /status HTTP/1.1" 200 -
+2024-11-09 17:35:31,252 127.0.0.1 - - [09/Nov/2024 17:35:31] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:35:33,287 127.0.0.1 - - [09/Nov/2024 17:35:33] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:35:35,321 127.0.0.1 - - [09/Nov/2024 17:35:35] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:35:35,356 127.0.0.1 - - [09/Nov/2024 17:35:35] "[31m[1mPOST /logout HTTP/1.1[0m" 403 -
+2024-11-09 17:36:30,000 127.0.0.1 - - [09/Nov/2024 17:36:29] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 17:36:30,047 127.0.0.1 - - [09/Nov/2024 17:36:30] "GET /status HTTP/1.1" 200 -
+2024-11-09 17:36:32,096 127.0.0.1 - - [09/Nov/2024 17:36:32] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:36:34,134 127.0.0.1 - - [09/Nov/2024 17:36:34] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:36:36,176 127.0.0.1 - - [09/Nov/2024 17:36:36] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:36:36,215 127.0.0.1 - - [09/Nov/2024 17:36:36] "[31m[1mPOST /logout HTTP/1.1[0m" 403 -
+2024-11-09 17:37:56,647 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 17:37:56,647 [33mPress CTRL+C to quit[0m
+2024-11-09 17:38:26,619 127.0.0.1 - - [09/Nov/2024 17:38:26] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 17:38:26,659 127.0.0.1 - - [09/Nov/2024 17:38:26] "GET /status HTTP/1.1" 200 -
+2024-11-09 17:38:28,695 127.0.0.1 - - [09/Nov/2024 17:38:28] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:38:30,735 127.0.0.1 - - [09/Nov/2024 17:38:30] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:38:32,772 127.0.0.1 - - [09/Nov/2024 17:38:32] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:38:32,807 127.0.0.1 - - [09/Nov/2024 17:38:32] "[31m[1mPOST /logout HTTP/1.1[0m" 403 -
+2024-11-09 17:39:51,934 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 17:39:51,935 [33mPress CTRL+C to quit[0m
+2024-11-09 17:40:07,521 127.0.0.1 - - [09/Nov/2024 17:40:07] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-09 17:40:07,574 127.0.0.1 - - [09/Nov/2024 17:40:07] "GET /status HTTP/1.1" 200 -
+2024-11-09 17:40:09,608 127.0.0.1 - - [09/Nov/2024 17:40:09] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:40:11,642 127.0.0.1 - - [09/Nov/2024 17:40:11] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:40:13,678 127.0.0.1 - - [09/Nov/2024 17:40:13] "[31m[1mPOST /action HTTP/1.1[0m" 403 -
+2024-11-09 17:40:13,711 127.0.0.1 - - [09/Nov/2024 17:40:13] "[31m[1mPOST /logout HTTP/1.1[0m" 403 -
+2024-11-09 17:42:08,757 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 17:42:08,757 [33mPress CTRL+C to quit[0m
+2024-11-09 17:42:21,472 127.0.0.1 - - [09/Nov/2024 17:42:21] "POST /api/register HTTP/1.1" 200 -
+2024-11-09 17:42:23,505 Client client1: INCREASE 10. New counter value: 10
+2024-11-09 17:42:23,507 127.0.0.1 - - [09/Nov/2024 17:42:23] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:42:25,542 Client client1: DECREASE 5. New counter value: 5
+2024-11-09 17:42:25,542 127.0.0.1 - - [09/Nov/2024 17:42:25] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:42:27,577 Client client1: INCREASE 15. New counter value: 20
+2024-11-09 17:42:27,577 127.0.0.1 - - [09/Nov/2024 17:42:27] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:42:27,612 127.0.0.1 - - [09/Nov/2024 17:42:27] "POST /logout HTTP/1.1" 200 -
+2024-11-09 17:45:03,199 127.0.0.1 - - [09/Nov/2024 17:45:03] "POST /api/register HTTP/1.1" 200 -
+2024-11-09 17:45:05,243 Client client1: INCREASE 10. New counter value: 10
+2024-11-09 17:45:05,243 127.0.0.1 - - [09/Nov/2024 17:45:05] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:45:07,282 Client client1: DECREASE 5. New counter value: 5
+2024-11-09 17:45:07,283 127.0.0.1 - - [09/Nov/2024 17:45:07] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:45:09,323 Client client1: INCREASE 15. New counter value: 20
+2024-11-09 17:45:09,324 127.0.0.1 - - [09/Nov/2024 17:45:09] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:45:09,367 127.0.0.1 - - [09/Nov/2024 17:45:09] "POST /logout HTTP/1.1" 200 -
+2024-11-09 17:50:35,785 127.0.0.1 - - [09/Nov/2024 17:50:35] "POST /api/register HTTP/1.1" 200 -
+2024-11-09 17:50:37,822 Client client1: INCREASE 10. New counter value: 10
+2024-11-09 17:50:37,822 127.0.0.1 - - [09/Nov/2024 17:50:37] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:50:39,858 Client client1: DECREASE 5. New counter value: 5
+2024-11-09 17:50:39,858 127.0.0.1 - - [09/Nov/2024 17:50:39] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:50:41,892 Client client1: INCREASE 15. New counter value: 20
+2024-11-09 17:50:41,892 127.0.0.1 - - [09/Nov/2024 17:50:41] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:50:51,931 127.0.0.1 - - [09/Nov/2024 17:50:51] "POST /logout HTTP/1.1" 200 -
+2024-11-09 17:53:59,228 127.0.0.1 - - [09/Nov/2024 17:53:59] "POST /api/register HTTP/1.1" 200 -
+2024-11-09 17:54:01,263 Client client1: INCREASE 10. New counter value: 10
+2024-11-09 17:54:01,263 127.0.0.1 - - [09/Nov/2024 17:54:01] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:54:03,299 Client client1: DECREASE 5. New counter value: 5
+2024-11-09 17:54:03,299 127.0.0.1 - - [09/Nov/2024 17:54:03] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:54:05,333 Client client1: INCREASE 15. New counter value: 20
+2024-11-09 17:54:05,333 127.0.0.1 - - [09/Nov/2024 17:54:05] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:54:55,369 127.0.0.1 - - [09/Nov/2024 17:54:55] "POST /logout HTTP/1.1" 200 -
+2024-11-09 17:57:27,753 127.0.0.1 - - [09/Nov/2024 17:57:27] "POST /api/register HTTP/1.1" 200 -
+2024-11-09 17:57:28,789 Client client2: INCREASE 20. New counter value: 20
+2024-11-09 17:57:28,790 127.0.0.1 - - [09/Nov/2024 17:57:28] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:57:29,824 Client client2: DECREASE 10. New counter value: 10
+2024-11-09 17:57:29,824 127.0.0.1 - - [09/Nov/2024 17:57:29] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:57:30,858 Client client2: INCREASE 5. New counter value: 15
+2024-11-09 17:57:30,858 127.0.0.1 - - [09/Nov/2024 17:57:30] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:57:41,811 127.0.0.1 - - [09/Nov/2024 17:57:41] "POST /api/register HTTP/1.1" 200 -
+2024-11-09 17:57:43,846 Client client1: INCREASE 10. New counter value: 10
+2024-11-09 17:57:43,846 127.0.0.1 - - [09/Nov/2024 17:57:43] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:57:45,882 Client client1: DECREASE 5. New counter value: 5
+2024-11-09 17:57:45,883 127.0.0.1 - - [09/Nov/2024 17:57:45] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:57:47,918 Client client1: INCREASE 15. New counter value: 20
+2024-11-09 17:57:47,918 127.0.0.1 - - [09/Nov/2024 17:57:47] "POST /action HTTP/1.1" 200 -
+2024-11-09 17:58:20,891 127.0.0.1 - - [09/Nov/2024 17:58:20] "POST /logout HTTP/1.1" 200 -
+2024-11-09 17:58:37,960 127.0.0.1 - - [09/Nov/2024 17:58:37] "POST /logout HTTP/1.1" 200 -

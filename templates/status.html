@@ -19,6 +19,10 @@
             max-width: 100%;
             height: auto;
         }
+        .message {
+            color: rgb(35, 148, 95);
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -26,6 +30,9 @@
         <h1>Status Page</h1>
         <p>This is a status page with some Slovak individual.</p>
         <img src="{{ url_for('static', filename='images/Pozdrav_z_dovolene.jpg') }}" alt="Placeholder Image">
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
     </div>
 </body>
 </html>

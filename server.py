@@ -1,11 +1,16 @@
 # Server application code
 
 # imports
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for, session
 import threading
 import logging
+import time
+import secrets
 
 app = Flask(__name__)
+# app.secret_key = secrets.token_hex(16) # Generate a random secret key 
+app.secret_key = '3f41d5d0b1633b8c03ded3b3db4410e7' #TODO: generate one and store safely
+# print(app.secret_key)
 
 # Configure logging
 logging.basicConfig(filename='server.log', level=logging.INFO, format='%(asctime)s %(message)s')
@@ -28,12 +33,18 @@ def register_page():
                     # Increment connection count
                     clients[client_id]['connections'] += 1
                     message = 'Existing client logged in successfully.'
-                    return render_template('status.html', client_id=client_id, message=message)
+                    time.sleep(1)
+                    session['client_id'] = client_id
+                    session['message'] = message
+                    return redirect(url_for('status'))
             else:
                 # Register new client
                 clients[client_id] = {'password': password, 'counter': 0, 'connections': 1}
                 message = 'New client registered successfully.'
-                return render_template('status.html', client_id=client_id, message=message)
+                time.sleep(1)
+                session['client_id'] = client_id
+                session['message'] = message
+                return redirect(url_for('status'))
     else:
         return render_template('register.html')
 
@@ -67,7 +78,9 @@ def action():
     with lock:
         # Authenticate client
         client = clients.get(client_id)
-        if not client or client['password'] != password:
+        if not client:
+            return jsonify({'status': 'error', 'message': 'Client not registered'}), 403
+        elif client['password'] != password:
             return jsonify({'status': 'error', 'message': 'Authentication failed'}), 403
 
         # Parse and perform the action
@@ -109,8 +122,8 @@ def logout():
 
 @app.route('/status', methods=['GET'])
 def status():
-    client_id = request.args.get('client_id')
-    message = request.args.get('message')
+    client_id = session.get('client_id')
+    message = session.get('message')
     if client_id and client_id in clients:
         return render_template('status.html', client_id=client_id, message=message)
     else:
