@@ -160,3 +160,83 @@ jinja2.exceptions.TemplateNotFound: status.html
 2024-11-08 19:48:05,359 Client client1: INCREASE 15. New counter value: 20
 2024-11-08 19:48:05,361 127.0.0.1 - - [08/Nov/2024 19:48:05] "POST /action HTTP/1.1" 200 -
 2024-11-08 19:48:05,427 127.0.0.1 - - [08/Nov/2024 19:48:05] "POST /logout HTTP/1.1" 200 -
+2024-11-08 20:46:42,029 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-08 20:46:42,029 [33mPress CTRL+C to quit[0m
+2024-11-08 20:47:31,065 127.0.0.1 - - [08/Nov/2024 20:47:31] "[33mGET / HTTP/1.1[0m" 404 -
+2024-11-08 20:47:31,177 127.0.0.1 - - [08/Nov/2024 20:47:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-08 20:48:23,586 127.0.0.1 - - [08/Nov/2024 20:48:23] "[33mGET / HTTP/1.1[0m" 404 -
+2024-11-08 20:48:49,943 192.168.178.215 - - [08/Nov/2024 20:48:49] "[33mGET / HTTP/1.1[0m" 404 -
+2024-11-08 20:48:50,035 192.168.178.215 - - [08/Nov/2024 20:48:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-08 20:50:07,093 127.0.0.1 - - [08/Nov/2024 20:50:07] "[33mGET / HTTP/1.1[0m" 404 -
+2024-11-08 20:50:55,562 127.0.0.1 - - [08/Nov/2024 20:50:55] "[31m[1mGET /register HTTP/1.1[0m" 405 -
+2024-11-08 20:51:05,617 127.0.0.1 - - [08/Nov/2024 20:51:05] "[33mGET / HTTP/1.1[0m" 404 -
+2024-11-09 14:45:17,852 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 14:45:17,852 [33mPress CTRL+C to quit[0m
+2024-11-09 14:45:25,317 127.0.0.1 - - [09/Nov/2024 14:45:25] "[33mGET / HTTP/1.1[0m" 404 -
+2024-11-09 14:48:59,879 127.0.0.1 - - [09/Nov/2024 14:48:59] "GET /status HTTP/1.1" 200 -
+2024-11-09 14:49:00,113 127.0.0.1 - - [09/Nov/2024 14:49:00] "GET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1" 200 -
+2024-11-09 14:50:23,153 127.0.0.1 - - [09/Nov/2024 14:50:23] "GET /status HTTP/1.1" 200 -
+2024-11-09 14:50:23,194 127.0.0.1 - - [09/Nov/2024 14:50:23] "GET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1" 200 -
+2024-11-09 14:58:50,633 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 14:58:50,636 [33mPress CTRL+C to quit[0m
+2024-11-09 14:59:06,679 127.0.0.1 - - [09/Nov/2024 14:59:06] "[31m[1mGET /register HTTP/1.1[0m" 405 -
+2024-11-09 15:34:47,747 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 15:34:47,748 [33mPress CTRL+C to quit[0m
+2024-11-09 15:35:45,124 127.0.0.1 - - [09/Nov/2024 15:35:45] "GET /register HTTP/1.1" 200 -
+2024-11-09 15:36:06,533 127.0.0.1 - - [09/Nov/2024 15:36:06] "POST /register HTTP/1.1" 200 -
+2024-11-09 15:36:06,758 127.0.0.1 - - [09/Nov/2024 15:36:06] "GET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1" 200 -
+2024-11-09 15:36:36,812 127.0.0.1 - - [09/Nov/2024 15:36:36] "GET /status HTTP/1.1" 200 -
+2024-11-09 15:36:36,911 127.0.0.1 - - [09/Nov/2024 15:36:36] "[36mGET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 304 -
+2024-11-09 15:39:35,928 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 15:39:35,928 [33mPress CTRL+C to quit[0m
+2024-11-09 15:39:38,578 127.0.0.1 - - [09/Nov/2024 15:39:38] "GET /status HTTP/1.1" 200 -
+2024-11-09 15:39:57,641 127.0.0.1 - - [09/Nov/2024 15:39:57] "POST /register HTTP/1.1" 200 -
+2024-11-09 15:39:57,854 127.0.0.1 - - [09/Nov/2024 15:39:57] "[36mGET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1[0m" 304 -
+2024-11-09 15:41:53,342 127.0.0.1 - - [09/Nov/2024 15:41:53] "GET /register HTTP/1.1" 200 -
+2024-11-09 15:42:06,058 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 15:42:06,058 [33mPress CTRL+C to quit[0m
+2024-11-09 15:42:09,214 127.0.0.1 - - [09/Nov/2024 15:42:09] "GET /register HTTP/1.1" 200 -
+2024-11-09 15:44:11,838 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 15:44:11,838 [33mPress CTRL+C to quit[0m
+2024-11-09 15:44:14,039 127.0.0.1 - - [09/Nov/2024 15:44:14] "GET /register HTTP/1.1" 200 -
+2024-11-09 15:45:27,943 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 15:45:27,943 [33mPress CTRL+C to quit[0m
+2024-11-09 15:45:36,139 127.0.0.1 - - [09/Nov/2024 15:45:36] "GET /register HTTP/1.1" 200 -
+2024-11-09 15:56:20,259 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 15:56:20,259 [33mPress CTRL+C to quit[0m
+2024-11-09 15:56:25,642 127.0.0.1 - - [09/Nov/2024 15:56:25] "GET /register HTTP/1.1" 200 -
+2024-11-09 15:56:25,743 127.0.0.1 - - [09/Nov/2024 15:56:25] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-09 15:57:31,618 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.178.215:5000
+2024-11-09 15:57:31,619 [33mPress CTRL+C to quit[0m
+2024-11-09 15:57:35,704 127.0.0.1 - - [09/Nov/2024 15:57:35] "GET /register HTTP/1.1" 200 -
+2024-11-09 15:57:35,815 127.0.0.1 - - [09/Nov/2024 15:57:35] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -

@@ -13,7 +13,31 @@ logging.basicConfig(filename='server.log', level=logging.INFO, format='%(asctime
 clients = {}  # Stores client data:
 lock = threading.Lock()  # Ensures thread-safe operations
 
-@app.route('/register', methods=['POST'])
+@app.route('/register', methods=['GET', 'POST'])
+def register_page():
+    if request.method == 'POST':
+        client_id = request.form.get('id')
+        password = request.form.get('password')
+
+        with lock:
+            if client_id in clients:
+                if clients[client_id]['password'] != password:
+                    message = 'Incorrect password.'
+                    return render_template('register.html', message=message)
+                else:
+                    # Increment connection count
+                    clients[client_id]['connections'] += 1
+                    message = 'Existing client logged in successfully.'
+                    return render_template('status.html', client_id=client_id, message=message)
+            else:
+                # Register new client
+                clients[client_id] = {'password': password, 'counter': 0, 'connections': 1}
+                message = 'New client registered successfully.'
+                return render_template('status.html', client_id=client_id, message=message)
+    else:
+        return render_template('register.html')
+
+@app.route('/api/register', methods=['POST'])
 def register():
     data = request.get_json()
     client_id = data.get('id')
@@ -85,7 +109,13 @@ def logout():
 
 @app.route('/status', methods=['GET'])
 def status():
-    return render_template('status.html')
+    client_id = request.args.get('client_id')
+    message = request.args.get('message')
+    if client_id and client_id in clients:
+        return render_template('status.html', client_id=client_id, message=message)
+    else:
+        return render_template('register.html', message=message)
+
 
 if __name__ == '__main__':
     context = ('server.crt', 'server.key')  # SSL certificate and key files
