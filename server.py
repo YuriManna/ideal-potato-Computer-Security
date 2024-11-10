@@ -3,12 +3,11 @@
 # imports
 from datetime import datetime, timedelta
 import bcrypt # Secure password hashing library
-from flask import Flask, make_response, render_template, request, jsonify, redirect, url_for, session # Web framework and session management
+from flask import Flask, make_response, render_template, request, jsonify, redirect, url_for, session
 import threading # Ensures thread-safe operations
 import logging # Logging module\
 import jwt  # For JSON Web Tokens
 from functools import wraps
-import secrets
 import re # Regular expressions for input validation
 # Form handling and validation
 from flask_wtf import FlaskForm, CSRFProtect
@@ -18,27 +17,9 @@ from wtforms.validators import DataRequired, Length, Regexp, Optional, Validatio
 # Rate limiting to prevent abuse
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-
-app = Flask(__name__)
-# app.secret_key = secrets.token_hex(16) # Generate a random secret key 
-app.secret_key = '3f41d5d0b1633b8c03ded3b3db4410e7' #TODO: generate one and store safely
-# print(app.secret_key)
-
-# Enable CSRF protection
-csrf = CSRFProtect(app)
-
-# Configure logging
-logging.basicConfig(filename='server.log', level=logging.DEBUG, format='%(asctime)s %(message)s')
-
-clients = {}  # Keeps track of registered clients, their hashed passwords, personal counters, and the number of active connections
-lock = threading.Lock()  # Ensures thread-safe operations
-
-# Rate Limiter
-# Rate limiting based on the client's IP address to prevent abuse and brute-force attacks
-limiter = Limiter(
-    key_func=get_remote_address
-)
-limiter.init_app(app)
+# Encryption Libraries
+from cryptography.fernet import Fernet
+import secrets
 
 #------------------------------------------------------------------------------------------------
 # Functions
@@ -102,28 +83,28 @@ def token_required(f):
             token_parts = auth_header.split()
             if len(token_parts) == 2 and token_parts[0] == 'Bearer':
                 token = token_parts[1]
-                logging.debug(f"Token extracted from Authorization header: {token}")
+                encrypt_and_log(f"Token extracted from Authorization header: {token}", level='debug')
         elif 'token' in request.cookies:
             token = request.cookies.get('token')
-            logging.debug(f"Token extracted from cookies: {token}")
+            encrypt_and_log(f"Token extracted from cookies: {token}", level='debug')
 
         if not token:
-            logging.warning(f"Token missing in request from IP {request.remote_addr}")
+            encrypt_and_log(f"Token missing in request from IP {request.remote_addr}", level='warning')
             return jsonify({'status': 'error', 'message': 'Token is missing!'}), 401
         try:
             data = jwt.decode(token, app.secret_key, algorithms=['HS256'])
             client_id = data['client_id']
-            logging.debug(f"Token decoded successfully. Client ID: {client_id}")
+            encrypt_and_log(f"Token decoded successfully. Client ID: {client_id}", level='debug')
             # Check if client exists
             with lock:
                 if client_id not in clients:
-                    logging.warning(f"Client ID '{client_id}' from token does not exist.")
+                    encrypt_and_log(f"Client ID '{client_id}' from token does not exist.", level='warning')
                     return jsonify({'status': 'error', 'message': 'Invalid token!'}), 401
         except jwt.ExpiredSignatureError:
-            logging.warning(f"Expired token used from IP {request.remote_addr}")
+            encrypt_and_log(f"Expired token used from IP {request.remote_addr}", level='warning')
             return jsonify({'status': 'error', 'message': 'Token has expired!'}), 401
         except jwt.InvalidTokenError:
-            logging.warning(f"Invalid token used from IP {request.remote_addr}")
+            encrypt_and_log(f"Invalid token used from IP {request.remote_addr}", level='warning')
             return jsonify({'status': 'error', 'message': 'Invalid token!'}), 401
         return f(client_id, *args, **kwargs)
     return decorated
@@ -138,15 +119,15 @@ def get_client_id_from_token():
         token_parts = auth_header.split()
         if len(token_parts) == 2 and token_parts[0] == 'Bearer':
             token = token_parts[1]
-            logging.debug("Token extracted from Authorization header.")
+            encrypt_and_log(f"Token extracted from Authorization header: {token}", level='debug')
     # If not found in header, check cookies
     if not token:
         token = request.cookies.get('token')
         if token:
-            logging.debug("Token extracted from cookies.")
+            encrypt_and_log(f"Token extracted from cookies: {token}", level='debug')
     
     if not token:
-        logging.warning(f"Token missing in logout request from IP {request.remote_addr}")
+        encrypt_and_log(f"Token missing in request from IP {request.remote_addr}", level='warning')
         return None
     
     try:
@@ -155,17 +136,59 @@ def get_client_id_from_token():
         # Verify client exists
         with lock:
             if client_id not in clients:
-                logging.warning(f"Client ID '{client_id}' from token does not exist.")
+                encrypt_and_log(f"Client ID '{client_id}' from token does not exist.", level='warning')
                 return None
         return client_id
     except jwt.ExpiredSignatureError:
-        logging.warning(f"Expired token used for logout from IP {request.remote_addr}")
+        encrypt_and_log(f"Expired token used for logout from IP {request.remote_addr}", level='warning')
     except jwt.InvalidTokenError:
-        logging.warning(f"Invalid token used for logout from IP {request.remote_addr}")
+        encrypt_and_log(f"Invalid token used for logout from IP {request.remote_addr}", level='warning')
     
     return None
 
-    
+def load_encryption_key():
+    with open('log.key', 'rb') as key_file:
+        logkey = key_file.read()
+    return logkey
+
+def encrypt_and_log(message, level='info'):
+    encrypted_message = cipher_suite.encrypt(message.encode()).decode()
+    if level == 'info':
+        logging.info(encrypted_message)
+    elif level == 'warning':
+        logging.warning(encrypted_message)
+    elif level == 'error':
+        logging.error(encrypted_message)
+    else:
+        logging.debug(encrypted_message)
+
+#------------------------------------------------------------------------------------------------
+# Initialization
+
+# Load the log encryption key
+logKey = load_encryption_key()
+cipher_suite = Fernet(logKey)
+
+# Initialize the Flask application
+app = Flask(__name__)
+
+app.secret_key = '3f41d5d0b1633b8c03ded3b3db4410e7'
+# Enable CSRF protection
+csrf = CSRFProtect(app)
+
+# Configure logging
+logging.basicConfig(filename='server.log', level=logging.DEBUG, format='%(asctime)s %(message)s')
+
+clients = {}  # Keeps track of registered clients, their hashed passwords, personal counters, and the number of active connections
+lock = threading.Lock()  # Ensures thread-safe operations
+
+# Rate Limiter
+# Rate limiting based on the client's IP address to prevent abuse and brute-force attacks
+limiter = Limiter(
+    key_func=get_remote_address
+)
+limiter.init_app(app)
+
 #------------------------------------------------------------------------------------------------
 # Forms
 
@@ -222,7 +245,7 @@ def api_register():
     
     # Validate inputs
     if not is_valid_input(client_id) or not is_valid_input(password):
-        logging.warning(f"Invalid input during registration from IP {request.remote_addr}")
+        encrypt_and_log(f"Invalid input during registration from IP {request.remote_addr}", level='warning')
         return jsonify({'status': 'error', 'message': 'Invalid input'}), 400
 
     # Hash the password
@@ -233,16 +256,16 @@ def api_register():
         if client_id in clients:
             # Authenticate the client
             if not bcrypt.checkpw(password.encode('utf-8'), clients[client_id]['password']):
-                logging.warning(f"Failed login attempt for user '{client_id}' from IP {request.remote_addr}")
+                encrypt_and_log(f"Failed login attempt for user '{client_id}' from IP {request.remote_addr}", level='warning')
                 return jsonify({'status': 'error', 'message': 'Authentication failed'}), 403
             else:
                 # Increment the number of connections
                 clients[client_id]['connections'] += 1
-                logging.info(f"User '{client_id}' logged in successfully from IP {request.remote_addr}, active connections: {clients[client_id]['connections']}")
+                encrypt_and_log(f"User '{client_id}' logged in successfully from IP {request.remote_addr}, active connections: {clients[client_id]['connections']}", level='info')
         else:
             # Else register the client
             clients[client_id] = {'password': hashed_password, 'counter': 0, 'connections': 1}
-            logging.info(f"User '{client_id}' registered successfully from IP {request.remote_addr}, active connections: {clients[client_id]['connections']}")
+            encrypt_and_log(f"User '{client_id}' registered successfully from IP {request.remote_addr}, active connections: {clients[client_id]['connections']}", level='info')
 
     token = generate_token(client_id)
     return jsonify({'status': 'success', 'message': 'Registered successfully', 'token': token}), 200
@@ -271,17 +294,17 @@ def register_page():
                 # Authenticate the client
                 if not bcrypt.checkpw(password.encode('utf-8'), clients[client_id]['password']):
                     message = 'Authentication failed.'
-                    logging.warning(f"Failed login attempt for user '{client_id}' from IP {request.remote_addr}")
+                    encrypt_and_log(f"Failed login attempt for user '{client_id}' from IP {request.remote_addr}", level='warning')
                     return render_template('register.html', form=form, message=message)
                 else:
                     # Increment the number of connections
                     clients[client_id]['connections'] += 1
-                    logging.info(f"User '{client_id}' logged in successfully from IP {request.remote_addr}, active connections: {clients[client_id]['connections']}")
+                    encrypt_and_log(f"User '{client_id}' logged in successfully from IP {request.remote_addr}, active connections: {clients[client_id]['connections']}", level='info')
                     message = 'Logged in successfully.'
             else:
                 # Else register the client
                 clients[client_id] = {'password': hashed_password, 'counter': 0, 'connections': 1}
-                logging.info(f"User '{client_id}' registered successfully from IP {request.remote_addr}, active connections: {clients[client_id]['connections']}")
+                encrypt_and_log(f"User '{client_id}' registered successfully from IP {request.remote_addr}, active connections: {clients[client_id]['connections']}", level='info')
                 message = 'Registered successfully.'
 
         token = generate_token(client_id)
@@ -299,11 +322,11 @@ def action(client_id):
     try:
         data = request.get_json()
         if not data or 'action' not in data:
-            logging.warning(f"Action missing in request from client '{client_id}'")
+            encrypt_and_log(f"Action missing in request from client '{client_id}'", level='warning')
             return jsonify({'status': 'error', 'message': 'No action provided'}), 400
 
         action_cmd = data.get('action')
-        logging.debug(f"Client '{client_id}' requested action: {action_cmd}")
+        encrypt_and_log(f"Client '{client_id}' requested action: {action_cmd}", level='info')
 
         # Parse and perform the action
         command, amount = parse_action(action_cmd)
@@ -311,21 +334,20 @@ def action(client_id):
             with lock:
                 client = clients.get(client_id)
                 if client is None:
-                    logging.error(f"Client '{client_id}' not found during action processing.")
+                    encrypt_and_log(f"Client '{client_id}' not found during action processing.", level='error')
                     return jsonify({'status': 'error', 'message': 'Client not found'}), 404
                 if command == 'INCREASE':
                     client['counter'] += amount
                 elif command == 'DECREASE':
                     client['counter'] -= amount
-
-                logging.info(f"Client '{client_id}' performed action '{action_cmd}'. New counter value: {client['counter']}")
+                encrypt_and_log(f"Client '{client_id}' performed action '{action_cmd}'. New counter value: {client['counter']}", level='info')
 
                 return jsonify({'status': 'success', 'new_value': client['counter']}), 200
         else:
-            logging.warning(f"Invalid action format from client '{client_id}': {action_cmd}")
+            encrypt_and_log(f"Invalid action format from client '{client_id}': {action_cmd}", level='warning')
             return jsonify({'status': 'error', 'message': 'Invalid action format'}), 400
     except Exception as e:
-        logging.error(f"Exception in /action route for client '{client_id}': {e}")
+        encrypt_and_log(f"Exception in /action route for client '{client_id}': {e}", level='error')
         return jsonify({'status': 'error', 'message': 'Server error occurred'}), 500
 
     
@@ -355,8 +377,7 @@ def perform_action():
                     elif command == 'DECREASE':
                         clients[client_id]['counter'] -= amount
                     counter_value = clients[client_id]['counter']
-
-                logging.info(f"Client '{client_id}' performed action '{action_cmd}'. New counter value: {counter_value}")
+                encrypt_and_log(f"Client '{client_id}' performed action '{action_cmd}'. New counter value: {counter_value}", level='info')
                 message = f"Action '{action_cmd}' performed. New counter value: {counter_value}"
             else:
                 message = 'Invalid action format.'
@@ -375,7 +396,7 @@ def perform_action():
 def logout():
     client_id = get_client_id_from_token()
     if not client_id:
-        logging.warning(f"Unauthorized logout attempt from IP {request.remote_addr}")
+        encrypt_and_log(f"Unauthorized logout attempt from IP {request.remote_addr}", level='warning')
         return jsonify({'status': 'error', 'message': 'Unauthorized logout attempt.'}), 401
 
     with lock:
@@ -384,9 +405,9 @@ def logout():
             client['connections'] = 0  # Log out user from all connections
             if client['connections'] <= 0:
                 del clients[client_id]  # Delete client data
-                logging.info(f"All sessions for user '{client_id}' have ended. User data deleted.")
+                encrypt_and_log(f"All sessions for user '{client_id}' have ended. User data deleted.", level='info')
             else:
-                logging.info(f"User '{client_id}' logged out, active connections: {client['connections']}")
+                encrypt_and_log(f"User '{client_id}' logged out, active connections: {client['connections']}", level='info')
     
     # Clear the token cookie if present
     response = make_response(jsonify({'status': 'success', 'message': 'Logged out successfully.'}), 200)
