@@ -393,15 +393,11 @@ def logout():
     response.delete_cookie('token')
     return response
 
-
 @app.route('/status', methods=['GET'])
+@csrf.exempt
 def status():
-    client_id = session.get('client_id')
-    message = session.get('message')
-    if client_id and client_id in clients:
-        return render_template('status.html', client_id=client_id, message=message)
-    else:
-        return render_template('register.html', message=message)
+    return render_template('status.html')
+
 
 # Ensure the server is running over HTTPS
 @app.before_request
