@@ -3,7 +3,7 @@
 # imports
 from datetime import datetime, timedelta
 import bcrypt # Secure password hashing library
-from flask import Flask, render_template, request, jsonify, redirect, url_for, session # Web framework and session management
+from flask import Flask, make_response, render_template, request, jsonify, redirect, url_for, session # Web framework and session management
 import threading # Ensures thread-safe operations
 import logging # Logging module\
 import jwt  # For JSON Web Tokens
@@ -42,11 +42,6 @@ limiter.init_app(app)
 
 #------------------------------------------------------------------------------------------------
 # Functions
-
-@app.route('/csrf-token', methods=['GET'])
-def csrf_token():
-    token = generate_csrf()
-    return jsonify({'csrf_token': token})
 
 def is_valid_input(input_str):
     """
@@ -136,20 +131,40 @@ def token_required(f):
 
 # Token Authentication for Web Routes
 def get_client_id_from_token():
-    token = request.cookies.get('token')
+    token = None
+    # Check Authorization header first
+    if 'Authorization' in request.headers:
+        auth_header = request.headers.get('Authorization')
+        token_parts = auth_header.split()
+        if len(token_parts) == 2 and token_parts[0] == 'Bearer':
+            token = token_parts[1]
+            logging.debug("Token extracted from Authorization header.")
+    # If not found in header, check cookies
     if not token:
+        token = request.cookies.get('token')
+        if token:
+            logging.debug("Token extracted from cookies.")
+    
+    if not token:
+        logging.warning(f"Token missing in logout request from IP {request.remote_addr}")
         return None
+    
     try:
         data = jwt.decode(token, app.secret_key, algorithms=['HS256'])
         client_id = data['client_id']
+        # Verify client exists
         with lock:
-            if client_id in clients:
-                return client_id
+            if client_id not in clients:
+                logging.warning(f"Client ID '{client_id}' from token does not exist.")
+                return None
+        return client_id
     except jwt.ExpiredSignatureError:
-        return None
+        logging.warning(f"Expired token used for logout from IP {request.remote_addr}")
     except jwt.InvalidTokenError:
-        return None
+        logging.warning(f"Invalid token used for logout from IP {request.remote_addr}")
+    
     return None
+
     
 #------------------------------------------------------------------------------------------------
 # Forms
@@ -191,6 +206,11 @@ class ActionForm(FlaskForm):
 #------------------------------------------------------------------------------------------------
 # Routes
 
+@app.route('/csrf-token', methods=['GET'])
+def csrf_token():
+    token = generate_csrf()
+    return jsonify({'csrf_token': token})
+
 # Allow users to register/login via the API (cmd json format)
 @limiter.limit("5 per minute") # Rate limit to prevent abuse
 @csrf.exempt # Disable CSRF protection for this route
@@ -202,6 +222,7 @@ def api_register():
     
     # Validate inputs
     if not is_valid_input(client_id) or not is_valid_input(password):
+        logging.warning(f"Invalid input during registration from IP {request.remote_addr}")
         return jsonify({'status': 'error', 'message': 'Invalid input'}), 400
 
     # Hash the password
@@ -217,11 +238,11 @@ def api_register():
             else:
                 # Increment the number of connections
                 clients[client_id]['connections'] += 1
-                logging.info(f"User '{client_id}' logged in successfully from IP {request.remote_addr}")
+                logging.info(f"User '{client_id}' logged in successfully from IP {request.remote_addr}, active connections: {clients[client_id]['connections']}")
         else:
             # Else register the client
             clients[client_id] = {'password': hashed_password, 'counter': 0, 'connections': 1}
-            logging.info(f"User '{client_id}' registered successfully from IP {request.remote_addr}")
+            logging.info(f"User '{client_id}' registered successfully from IP {request.remote_addr}, active connections: {clients[client_id]['connections']}")
 
     token = generate_token(client_id)
     return jsonify({'status': 'success', 'message': 'Registered successfully', 'token': token}), 200
@@ -255,12 +276,12 @@ def register_page():
                 else:
                     # Increment the number of connections
                     clients[client_id]['connections'] += 1
-                    logging.info(f"User '{client_id}' logged in successfully from IP {request.remote_addr}")
+                    logging.info(f"User '{client_id}' logged in successfully from IP {request.remote_addr}, active connections: {clients[client_id]['connections']}")
                     message = 'Logged in successfully.'
             else:
                 # Else register the client
                 clients[client_id] = {'password': hashed_password, 'counter': 0, 'connections': 1}
-                logging.info(f"User '{client_id}' registered successfully from IP {request.remote_addr}")
+                logging.info(f"User '{client_id}' registered successfully from IP {request.remote_addr}, active connections: {clients[client_id]['connections']}")
                 message = 'Registered successfully.'
 
         token = generate_token(client_id)
@@ -354,19 +375,21 @@ def perform_action():
 def logout():
     client_id = get_client_id_from_token()
     if not client_id:
-        return redirect(url_for('register_page'))
+        logging.warning(f"Unauthorized logout attempt from IP {request.remote_addr}")
+        return jsonify({'status': 'error', 'message': 'Unauthorized logout attempt.'}), 401
 
     with lock:
         client = clients.get(client_id)
         if client:
-            client['connections'] -= 1 # Decrement the number of connections
-            logging.info(f"User '{client_id}' logged out. Remaining connections: {client['connections']}")
-            if client['connections'] <= 0: # If no active connections delete the client
-                del clients[client_id]
+            client['connections'] = 0  # Log out user from all connections
+            if client['connections'] <= 0:
+                del clients[client_id]  # Delete client data
                 logging.info(f"All sessions for user '{client_id}' have ended. User data deleted.")
+            else:
+                logging.info(f"User '{client_id}' logged out, active connections: {client['connections']}")
     
-    # Clear the token cookie
-    response = redirect(url_for('register_page'))
+    # Clear the token cookie if present
+    response = make_response(jsonify({'status': 'success', 'message': 'Logged out successfully.'}), 200)
     response.delete_cookie('token')
     return response
 

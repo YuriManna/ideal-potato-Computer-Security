@@ -88,3 +88,456 @@ TypeError: action() missing 1 required positional argument: 'client_id'
 2024-11-09 23:57:37,217 127.0.0.1 - - [09/Nov/2024 23:57:37] "[32mGET /logout HTTP/1.1[0m" 302 -
 2024-11-09 23:57:37,239 127.0.0.1 - - [09/Nov/2024 23:57:37] "GET /register HTTP/1.1" 200 -
 2024-11-09 23:57:37,421 127.0.0.1 - - [09/Nov/2024 23:57:37] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:23:48,700  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-10 18:23:48,700  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-10 18:24:06,377 User 'user1' registered successfully from IP 127.0.0.1
+2024-11-10 18:24:06,378 127.0.0.1 - - [10/Nov/2024 18:24:06] "POST /api/register HTTP/1.1" 200 -
+2024-11-10 18:24:07,395 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2MzA0Nn0.ZWaJ8yPCysb_g6qVJLA04rQufQwWnachoGZAuYoUhkg
+2024-11-10 18:24:07,395 Token decoded successfully. Client ID: user1
+2024-11-10 18:24:07,395 Client 'user1' requested action: INCREASE 15
+2024-11-10 18:24:07,396 Client 'user1' performed action 'INCREASE 15'. New counter value: 15
+2024-11-10 18:24:07,396 127.0.0.1 - - [10/Nov/2024 18:24:07] "POST /action HTTP/1.1" 200 -
+2024-11-10 18:24:08,414 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2MzA0Nn0.ZWaJ8yPCysb_g6qVJLA04rQufQwWnachoGZAuYoUhkg
+2024-11-10 18:24:08,414 Token decoded successfully. Client ID: user1
+2024-11-10 18:24:08,414 Client 'user1' requested action: DECREASE 5
+2024-11-10 18:24:08,415 Client 'user1' performed action 'DECREASE 5'. New counter value: 10
+2024-11-10 18:24:08,415 127.0.0.1 - - [10/Nov/2024 18:24:08] "POST /action HTTP/1.1" 200 -
+2024-11-10 18:24:09,434 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2MzA0Nn0.ZWaJ8yPCysb_g6qVJLA04rQufQwWnachoGZAuYoUhkg
+2024-11-10 18:24:09,434 Token decoded successfully. Client ID: user1
+2024-11-10 18:24:09,434 Client 'user1' requested action: INCREASE 20
+2024-11-10 18:24:09,434 Client 'user1' performed action 'INCREASE 20'. New counter value: 30
+2024-11-10 18:24:09,434 127.0.0.1 - - [10/Nov/2024 18:24:09] "POST /action HTTP/1.1" 200 -
+2024-11-10 18:24:59,455 127.0.0.1 - - [10/Nov/2024 18:24:59] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-10 18:24:59,524 127.0.0.1 - - [10/Nov/2024 18:24:59] "GET /register HTTP/1.1" 200 -
+2024-11-10 18:25:00,026 127.0.0.1 - - [10/Nov/2024 18:25:00] "GET /register HTTP/1.1" 200 -
+2024-11-10 18:25:00,285 127.0.0.1 - - [10/Nov/2024 18:25:00] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-10 18:25:15,731 User 'ahoj' registered successfully from IP 127.0.0.1
+2024-11-10 18:25:15,731 127.0.0.1 - - [10/Nov/2024 18:25:15] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 18:25:15,762 127.0.0.1 - - [10/Nov/2024 18:25:15] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 18:25:15,927 127.0.0.1 - - [10/Nov/2024 18:25:15] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:25:23,462 Client 'ahoj' performed action 'increase 1000'. New counter value: 1000
+2024-11-10 18:25:23,463 127.0.0.1 - - [10/Nov/2024 18:25:23] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 18:25:23,561 127.0.0.1 - - [10/Nov/2024 18:25:23] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:25:30,771 Client 'ahoj' performed action 'decrease 100'. New counter value: 900
+2024-11-10 18:25:30,772 127.0.0.1 - - [10/Nov/2024 18:25:30] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 18:25:30,868 127.0.0.1 - - [10/Nov/2024 18:25:30] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:25:39,152 127.0.0.1 - - [10/Nov/2024 18:25:39] "GET /register HTTP/1.1" 200 -
+2024-11-10 18:25:39,253 127.0.0.1 - - [10/Nov/2024 18:25:39] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-10 18:25:46,308 Failed login attempt for user 'ahoj' from IP 127.0.0.1
+2024-11-10 18:25:46,308 127.0.0.1 - - [10/Nov/2024 18:25:46] "POST /register HTTP/1.1" 200 -
+2024-11-10 18:25:46,409 127.0.0.1 - - [10/Nov/2024 18:25:46] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:25:49,932 User 'ahoj' logged in successfully from IP 127.0.0.1
+2024-11-10 18:25:49,933 127.0.0.1 - - [10/Nov/2024 18:25:49] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 18:25:49,953 127.0.0.1 - - [10/Nov/2024 18:25:49] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 18:25:50,092 127.0.0.1 - - [10/Nov/2024 18:25:50] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:25:57,543 127.0.0.1 - - [10/Nov/2024 18:25:57] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 18:25:57,630 127.0.0.1 - - [10/Nov/2024 18:25:57] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:26:01,186 Client 'ahoj' performed action 'decrease 100'. New counter value: 800
+2024-11-10 18:26:01,186 127.0.0.1 - - [10/Nov/2024 18:26:01] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 18:26:01,276 127.0.0.1 - - [10/Nov/2024 18:26:01] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:26:04,125 Client 'ahoj' performed action 'decrease 100'. New counter value: 700
+2024-11-10 18:26:04,126 127.0.0.1 - - [10/Nov/2024 18:26:04] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 18:26:04,212 127.0.0.1 - - [10/Nov/2024 18:26:04] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:26:04,820 Client 'ahoj' performed action 'decrease 100'. New counter value: 600
+2024-11-10 18:26:04,820 127.0.0.1 - - [10/Nov/2024 18:26:04] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 18:26:04,895 127.0.0.1 - - [10/Nov/2024 18:26:04] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:26:12,445 Client 'ahoj' performed action 'increase 10000'. New counter value: 10600
+2024-11-10 18:26:12,446 127.0.0.1 - - [10/Nov/2024 18:26:12] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 18:26:12,534 127.0.0.1 - - [10/Nov/2024 18:26:12] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:26:14,940 127.0.0.1 - - [10/Nov/2024 18:26:14] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-10 18:26:14,950 User 'ahoj' logged out. Remaining connections: 1
+2024-11-10 18:26:14,951 127.0.0.1 - - [10/Nov/2024 18:26:14] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-10 18:26:14,975 127.0.0.1 - - [10/Nov/2024 18:26:14] "GET /register HTTP/1.1" 200 -
+2024-11-10 18:26:15,153 127.0.0.1 - - [10/Nov/2024 18:26:15] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:26:17,340 127.0.0.1 - - [10/Nov/2024 18:26:17] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-10 18:26:17,352 127.0.0.1 - - [10/Nov/2024 18:26:17] "GET /register HTTP/1.1" 200 -
+2024-11-10 18:26:17,497 127.0.0.1 - - [10/Nov/2024 18:26:17] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:26:22,311 User 'ahoj' logged in successfully from IP 127.0.0.1
+2024-11-10 18:26:22,313 127.0.0.1 - - [10/Nov/2024 18:26:22] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 18:26:22,328 127.0.0.1 - - [10/Nov/2024 18:26:22] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 18:26:22,498 127.0.0.1 - - [10/Nov/2024 18:26:22] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:26:35,732 127.0.0.1 - - [10/Nov/2024 18:26:35] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-10 18:26:35,742 User 'ahoj' logged out. Remaining connections: 1
+2024-11-10 18:26:35,743 127.0.0.1 - - [10/Nov/2024 18:26:35] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-10 18:26:35,764 127.0.0.1 - - [10/Nov/2024 18:26:35] "GET /register HTTP/1.1" 200 -
+2024-11-10 18:26:35,944 127.0.0.1 - - [10/Nov/2024 18:26:35] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:26:41,244 Failed login attempt for user 'ahoj' from IP 127.0.0.1
+2024-11-10 18:26:41,245 127.0.0.1 - - [10/Nov/2024 18:26:41] "POST /register HTTP/1.1" 200 -
+2024-11-10 18:26:41,333 127.0.0.1 - - [10/Nov/2024 18:26:41] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:26:45,338 User 'ahoj' logged in successfully from IP 127.0.0.1
+2024-11-10 18:26:45,338 127.0.0.1 - - [10/Nov/2024 18:26:45] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 18:26:45,350 127.0.0.1 - - [10/Nov/2024 18:26:45] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 18:26:45,504 127.0.0.1 - - [10/Nov/2024 18:26:45] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:26:47,401 127.0.0.1 - - [10/Nov/2024 18:26:47] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-10 18:26:47,418 User 'ahoj' logged out. Remaining connections: 1
+2024-11-10 18:26:47,418 127.0.0.1 - - [10/Nov/2024 18:26:47] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-10 18:26:47,431 127.0.0.1 - - [10/Nov/2024 18:26:47] "GET /register HTTP/1.1" 200 -
+2024-11-10 18:26:47,629 127.0.0.1 - - [10/Nov/2024 18:26:47] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 18:27:56,850 User 'user1' logged in successfully from IP 127.0.0.1
+2024-11-10 18:27:56,851 127.0.0.1 - - [10/Nov/2024 18:27:56] "POST /api/register HTTP/1.1" 200 -
+2024-11-10 18:27:57,868 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2MzI3Nn0.hjG4YCU5_YO3AvYFxNru1o0dSe1TBcrVk8qWdotgp7A
+2024-11-10 18:27:57,868 Token decoded successfully. Client ID: user1
+2024-11-10 18:27:57,868 Client 'user1' requested action: INCREASE 15
+2024-11-10 18:27:57,868 Client 'user1' performed action 'INCREASE 15'. New counter value: 45
+2024-11-10 18:27:57,869 127.0.0.1 - - [10/Nov/2024 18:27:57] "POST /action HTTP/1.1" 200 -
+2024-11-10 18:27:58,886 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2MzI3Nn0.hjG4YCU5_YO3AvYFxNru1o0dSe1TBcrVk8qWdotgp7A
+2024-11-10 18:27:58,886 Token decoded successfully. Client ID: user1
+2024-11-10 18:27:58,886 Client 'user1' requested action: DECREASE 5
+2024-11-10 18:27:58,886 Client 'user1' performed action 'DECREASE 5'. New counter value: 40
+2024-11-10 18:27:58,887 127.0.0.1 - - [10/Nov/2024 18:27:58] "POST /action HTTP/1.1" 200 -
+2024-11-10 18:27:59,905 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2MzI3Nn0.hjG4YCU5_YO3AvYFxNru1o0dSe1TBcrVk8qWdotgp7A
+2024-11-10 18:27:59,905 Token decoded successfully. Client ID: user1
+2024-11-10 18:27:59,906 Client 'user1' requested action: INCREASE 20
+2024-11-10 18:27:59,906 Client 'user1' performed action 'INCREASE 20'. New counter value: 60
+2024-11-10 18:27:59,906 127.0.0.1 - - [10/Nov/2024 18:27:59] "POST /action HTTP/1.1" 200 -
+2024-11-10 18:28:49,925 127.0.0.1 - - [10/Nov/2024 18:28:49] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-10 18:28:49,944 127.0.0.1 - - [10/Nov/2024 18:28:49] "GET /register HTTP/1.1" 200 -
+2024-11-10 18:46:52,207 User 'user1' logged in successfully from IP 127.0.0.1
+2024-11-10 18:46:52,207 127.0.0.1 - - [10/Nov/2024 18:46:52] "POST /api/register HTTP/1.1" 200 -
+2024-11-10 18:46:53,228 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NDQxMn0.sBOZRSCgSN7mJQ6hya2eLCOdy1k-rM8yiY_nq4NV8bo
+2024-11-10 18:46:53,228 Token decoded successfully. Client ID: user1
+2024-11-10 18:46:53,229 Client 'user1' requested action: INCREASE 15
+2024-11-10 18:46:53,229 Client 'user1' performed action 'INCREASE 15'. New counter value: 75
+2024-11-10 18:46:53,229 127.0.0.1 - - [10/Nov/2024 18:46:53] "POST /action HTTP/1.1" 200 -
+2024-11-10 18:46:54,246 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NDQxMn0.sBOZRSCgSN7mJQ6hya2eLCOdy1k-rM8yiY_nq4NV8bo
+2024-11-10 18:46:54,246 Token decoded successfully. Client ID: user1
+2024-11-10 18:46:54,246 Client 'user1' requested action: DECREASE 5
+2024-11-10 18:46:54,246 Client 'user1' performed action 'DECREASE 5'. New counter value: 70
+2024-11-10 18:46:54,246 127.0.0.1 - - [10/Nov/2024 18:46:54] "POST /action HTTP/1.1" 200 -
+2024-11-10 18:46:55,265 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NDQxMn0.sBOZRSCgSN7mJQ6hya2eLCOdy1k-rM8yiY_nq4NV8bo
+2024-11-10 18:46:55,265 Token decoded successfully. Client ID: user1
+2024-11-10 18:46:55,266 Client 'user1' requested action: INCREASE 20
+2024-11-10 18:46:55,266 Client 'user1' performed action 'INCREASE 20'. New counter value: 90
+2024-11-10 18:46:55,266 127.0.0.1 - - [10/Nov/2024 18:46:55] "POST /action HTTP/1.1" 200 -
+2024-11-10 18:47:45,284 127.0.0.1 - - [10/Nov/2024 18:47:45] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-10 18:47:45,300 127.0.0.1 - - [10/Nov/2024 18:47:45] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:15:07,147  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-10 19:15:07,148  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-10 19:15:13,543 User 'user1' registered successfully from IP 127.0.0.1, active connections: 1
+2024-11-10 19:15:13,544 127.0.0.1 - - [10/Nov/2024 19:15:13] "POST /api/register HTTP/1.1" 200 -
+2024-11-10 19:15:14,559 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NjExM30.oQCjsKHJ8qvOPqVWLfhFqzoIj0giW145LGjBdgJ4oU0
+2024-11-10 19:15:14,559 Token decoded successfully. Client ID: user1
+2024-11-10 19:15:14,560 Client 'user1' requested action: INCREASE 15
+2024-11-10 19:15:14,560 Client 'user1' performed action 'INCREASE 15'. New counter value: 15
+2024-11-10 19:15:14,560 127.0.0.1 - - [10/Nov/2024 19:15:14] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:15:15,576 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NjExM30.oQCjsKHJ8qvOPqVWLfhFqzoIj0giW145LGjBdgJ4oU0
+2024-11-10 19:15:15,576 Token decoded successfully. Client ID: user1
+2024-11-10 19:15:15,577 Client 'user1' requested action: DECREASE 5
+2024-11-10 19:15:15,577 Client 'user1' performed action 'DECREASE 5'. New counter value: 10
+2024-11-10 19:15:15,577 127.0.0.1 - - [10/Nov/2024 19:15:15] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:15:16,596 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NjExM30.oQCjsKHJ8qvOPqVWLfhFqzoIj0giW145LGjBdgJ4oU0
+2024-11-10 19:15:16,597 Token decoded successfully. Client ID: user1
+2024-11-10 19:15:16,597 Client 'user1' requested action: INCREASE 20
+2024-11-10 19:15:16,597 Client 'user1' performed action 'INCREASE 20'. New counter value: 30
+2024-11-10 19:15:16,597 127.0.0.1 - - [10/Nov/2024 19:15:16] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:16:06,615 Unauthorized logout attempt from IP 127.0.0.1
+2024-11-10 19:16:06,616 127.0.0.1 - - [10/Nov/2024 19:16:06] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-10 19:16:06,636 127.0.0.1 - - [10/Nov/2024 19:16:06] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:16:19,391 User 'user1' logged in successfully from IP 127.0.0.1, active connections: 2
+2024-11-10 19:16:19,391 127.0.0.1 - - [10/Nov/2024 19:16:19] "POST /api/register HTTP/1.1" 200 -
+2024-11-10 19:16:20,408 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NjE3OX0.x62Z1vRYYN6-ukJYjzmjtzcNHEf4z8FTlUAVVzGptqY
+2024-11-10 19:16:20,408 Token decoded successfully. Client ID: user1
+2024-11-10 19:16:20,408 Client 'user1' requested action: INCREASE 15
+2024-11-10 19:16:20,408 Client 'user1' performed action 'INCREASE 15'. New counter value: 45
+2024-11-10 19:16:20,409 127.0.0.1 - - [10/Nov/2024 19:16:20] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:16:21,427 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NjE3OX0.x62Z1vRYYN6-ukJYjzmjtzcNHEf4z8FTlUAVVzGptqY
+2024-11-10 19:16:21,427 Token decoded successfully. Client ID: user1
+2024-11-10 19:16:21,427 Client 'user1' requested action: DECREASE 5
+2024-11-10 19:16:21,427 Client 'user1' performed action 'DECREASE 5'. New counter value: 40
+2024-11-10 19:16:21,427 127.0.0.1 - - [10/Nov/2024 19:16:21] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:16:22,445 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NjE3OX0.x62Z1vRYYN6-ukJYjzmjtzcNHEf4z8FTlUAVVzGptqY
+2024-11-10 19:16:22,445 Token decoded successfully. Client ID: user1
+2024-11-10 19:16:22,445 Client 'user1' requested action: INCREASE 20
+2024-11-10 19:16:22,446 Client 'user1' performed action 'INCREASE 20'. New counter value: 60
+2024-11-10 19:16:22,446 127.0.0.1 - - [10/Nov/2024 19:16:22] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:17:04,231 127.0.0.1 - - [10/Nov/2024 19:17:04] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:17:04,417 127.0.0.1 - - [10/Nov/2024 19:17:04] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-10 19:17:10,343 User 'ahoj' registered successfully from IP 127.0.0.1, active connections: 1
+2024-11-10 19:17:10,344 127.0.0.1 - - [10/Nov/2024 19:17:10] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 19:17:10,359 127.0.0.1 - - [10/Nov/2024 19:17:10] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 19:17:10,520 127.0.0.1 - - [10/Nov/2024 19:17:10] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:17:12,463 Unauthorized logout attempt from IP 127.0.0.1
+2024-11-10 19:17:12,464 127.0.0.1 - - [10/Nov/2024 19:17:12] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-10 19:17:12,479 127.0.0.1 - - [10/Nov/2024 19:17:12] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:17:14,907 Client 'ahoj' performed action 'increase 50'. New counter value: 50
+2024-11-10 19:17:14,908 127.0.0.1 - - [10/Nov/2024 19:17:14] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 19:17:15,010 127.0.0.1 - - [10/Nov/2024 19:17:15] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:17:15,940 Client 'ahoj' performed action 'increase 50'. New counter value: 100
+2024-11-10 19:17:15,941 127.0.0.1 - - [10/Nov/2024 19:17:15] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 19:17:16,036 127.0.0.1 - - [10/Nov/2024 19:17:16] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:17:16,245 Client 'ahoj' performed action 'increase 50'. New counter value: 150
+2024-11-10 19:17:16,245 127.0.0.1 - - [10/Nov/2024 19:17:16] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 19:17:16,328 127.0.0.1 - - [10/Nov/2024 19:17:16] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:17:17,327 127.0.0.1 - - [10/Nov/2024 19:17:17] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-10 19:17:17,367 All sessions for user 'ahoj' have ended. User data deleted.
+2024-11-10 19:17:17,367 127.0.0.1 - - [10/Nov/2024 19:17:17] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-10 19:17:18,117 127.0.0.1 - - [10/Nov/2024 19:17:18] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:17:18,286 127.0.0.1 - - [10/Nov/2024 19:17:18] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:17:22,134 User 'ahoj' registered successfully from IP 127.0.0.1, active connections: 1
+2024-11-10 19:17:22,135 127.0.0.1 - - [10/Nov/2024 19:17:22] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 19:17:22,154 127.0.0.1 - - [10/Nov/2024 19:17:22] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 19:17:22,334 127.0.0.1 - - [10/Nov/2024 19:17:22] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-10 19:17:26,710 127.0.0.1 - - [10/Nov/2024 19:17:26] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-10 19:17:26,722 All sessions for user 'ahoj' have ended. User data deleted.
+2024-11-10 19:17:26,722 127.0.0.1 - - [10/Nov/2024 19:17:26] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-10 19:17:26,751 127.0.0.1 - - [10/Nov/2024 19:17:26] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:17:26,935 127.0.0.1 - - [10/Nov/2024 19:17:26] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:17:30,468 User 'ahoj' registered successfully from IP 127.0.0.1, active connections: 1
+2024-11-10 19:17:30,469 127.0.0.1 - - [10/Nov/2024 19:17:30] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 19:17:30,480 127.0.0.1 - - [10/Nov/2024 19:17:30] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 19:17:30,668 127.0.0.1 - - [10/Nov/2024 19:17:30] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:17:49,966 User 'user1' logged in successfully from IP 127.0.0.1, active connections: 3
+2024-11-10 19:17:49,967 127.0.0.1 - - [10/Nov/2024 19:17:49] "POST /api/register HTTP/1.1" 200 -
+2024-11-10 19:17:50,982 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NjI2OX0.VWgjucLt0HdHpiAz6zqTNoFkD3FG11lQzmXXYMMirLk
+2024-11-10 19:17:50,983 Token decoded successfully. Client ID: user1
+2024-11-10 19:17:50,983 Client 'user1' requested action: INCREASE 15
+2024-11-10 19:17:50,983 Client 'user1' performed action 'INCREASE 15'. New counter value: 75
+2024-11-10 19:17:50,983 127.0.0.1 - - [10/Nov/2024 19:17:50] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:17:52,001 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NjI2OX0.VWgjucLt0HdHpiAz6zqTNoFkD3FG11lQzmXXYMMirLk
+2024-11-10 19:17:52,001 Token decoded successfully. Client ID: user1
+2024-11-10 19:17:52,001 Client 'user1' requested action: DECREASE 5
+2024-11-10 19:17:52,001 Client 'user1' performed action 'DECREASE 5'. New counter value: 70
+2024-11-10 19:17:52,002 127.0.0.1 - - [10/Nov/2024 19:17:52] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:17:53,018 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NjI2OX0.VWgjucLt0HdHpiAz6zqTNoFkD3FG11lQzmXXYMMirLk
+2024-11-10 19:17:53,019 Token decoded successfully. Client ID: user1
+2024-11-10 19:17:53,019 Client 'user1' requested action: INCREASE 20
+2024-11-10 19:17:53,019 Client 'user1' performed action 'INCREASE 20'. New counter value: 90
+2024-11-10 19:17:53,019 127.0.0.1 - - [10/Nov/2024 19:17:53] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:18:43,037 Unauthorized logout attempt from IP 127.0.0.1
+2024-11-10 19:18:43,037 127.0.0.1 - - [10/Nov/2024 19:18:43] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-10 19:18:43,052 127.0.0.1 - - [10/Nov/2024 19:18:43] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:35:23,476  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-10 19:35:23,476  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-10 19:35:29,416 User 'user1' registered successfully from IP 127.0.0.1, active connections: 1
+2024-11-10 19:35:29,416 127.0.0.1 - - [10/Nov/2024 19:35:29] "POST /api/register HTTP/1.1" 200 -
+2024-11-10 19:35:30,434 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NzMyOX0.fC7DnoxuLbjzy33K0LYb57u_4LK9UEKSrYMBU5NpZio
+2024-11-10 19:35:30,434 Token decoded successfully. Client ID: user1
+2024-11-10 19:35:30,435 Client 'user1' requested action: INCREASE 15
+2024-11-10 19:35:30,435 Client 'user1' performed action 'INCREASE 15'. New counter value: 15
+2024-11-10 19:35:30,435 127.0.0.1 - - [10/Nov/2024 19:35:30] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:35:31,452 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NzMyOX0.fC7DnoxuLbjzy33K0LYb57u_4LK9UEKSrYMBU5NpZio
+2024-11-10 19:35:31,453 Token decoded successfully. Client ID: user1
+2024-11-10 19:35:31,453 Client 'user1' requested action: DECREASE 5
+2024-11-10 19:35:31,453 Client 'user1' performed action 'DECREASE 5'. New counter value: 10
+2024-11-10 19:35:31,453 127.0.0.1 - - [10/Nov/2024 19:35:31] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:35:32,470 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NzMyOX0.fC7DnoxuLbjzy33K0LYb57u_4LK9UEKSrYMBU5NpZio
+2024-11-10 19:35:32,470 Token decoded successfully. Client ID: user1
+2024-11-10 19:35:32,470 Client 'user1' requested action: INCREASE 20
+2024-11-10 19:35:32,470 Client 'user1' performed action 'INCREASE 20'. New counter value: 30
+2024-11-10 19:35:32,471 127.0.0.1 - - [10/Nov/2024 19:35:32] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:35:37,486 Token extracted from Authorization header.
+2024-11-10 19:35:37,486 All sessions for user 'user1' have ended. User data deleted.
+2024-11-10 19:35:37,486 127.0.0.1 - - [10/Nov/2024 19:35:37] "GET /logout HTTP/1.1" 200 -
+2024-11-10 19:35:52,819 User 'user1' registered successfully from IP 127.0.0.1, active connections: 1
+2024-11-10 19:35:52,820 127.0.0.1 - - [10/Nov/2024 19:35:52] "POST /api/register HTTP/1.1" 200 -
+2024-11-10 19:35:53,835 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NzM1Mn0.93N4EFiUoyrgEnOqQCprrlwJ3pbf4AINCqJdes3H02E
+2024-11-10 19:35:53,835 Token decoded successfully. Client ID: user1
+2024-11-10 19:35:53,836 Client 'user1' requested action: INCREASE 15
+2024-11-10 19:35:53,836 Client 'user1' performed action 'INCREASE 15'. New counter value: 15
+2024-11-10 19:35:53,836 127.0.0.1 - - [10/Nov/2024 19:35:53] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:35:54,853 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NzM1Mn0.93N4EFiUoyrgEnOqQCprrlwJ3pbf4AINCqJdes3H02E
+2024-11-10 19:35:54,853 Token decoded successfully. Client ID: user1
+2024-11-10 19:35:54,853 Client 'user1' requested action: DECREASE 5
+2024-11-10 19:35:54,853 Client 'user1' performed action 'DECREASE 5'. New counter value: 10
+2024-11-10 19:35:54,853 127.0.0.1 - - [10/Nov/2024 19:35:54] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:35:55,866 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NzM1Mn0.93N4EFiUoyrgEnOqQCprrlwJ3pbf4AINCqJdes3H02E
+2024-11-10 19:35:55,866 Token decoded successfully. Client ID: user1
+2024-11-10 19:35:55,866 Client 'user1' requested action: INCREASE 20
+2024-11-10 19:35:55,867 Client 'user1' performed action 'INCREASE 20'. New counter value: 30
+2024-11-10 19:35:55,867 127.0.0.1 - - [10/Nov/2024 19:35:55] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:36:00,879 Token extracted from Authorization header.
+2024-11-10 19:36:00,879 All sessions for user 'user1' have ended. User data deleted.
+2024-11-10 19:36:00,879 127.0.0.1 - - [10/Nov/2024 19:36:00] "GET /logout HTTP/1.1" 200 -
+2024-11-10 19:36:59,153 127.0.0.1 - - [10/Nov/2024 19:36:59] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:36:59,329 127.0.0.1 - - [10/Nov/2024 19:36:59] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-10 19:37:04,973 User 'ahoj' registered successfully from IP 127.0.0.1, active connections: 1
+2024-11-10 19:37:04,974 127.0.0.1 - - [10/Nov/2024 19:37:04] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 19:37:04,984 Token extracted from cookies.
+2024-11-10 19:37:04,990 127.0.0.1 - - [10/Nov/2024 19:37:04] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 19:37:05,161 127.0.0.1 - - [10/Nov/2024 19:37:05] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:37:09,419 Token extracted from cookies.
+2024-11-10 19:37:09,421 127.0.0.1 - - [10/Nov/2024 19:37:09] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 19:37:09,515 127.0.0.1 - - [10/Nov/2024 19:37:09] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:37:11,972 Token extracted from cookies.
+2024-11-10 19:37:11,974 127.0.0.1 - - [10/Nov/2024 19:37:11] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 19:37:12,074 127.0.0.1 - - [10/Nov/2024 19:37:12] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:37:17,804 Token extracted from cookies.
+2024-11-10 19:37:17,805 Client 'ahoj' performed action 'increase 150'. New counter value: 150
+2024-11-10 19:37:17,805 127.0.0.1 - - [10/Nov/2024 19:37:17] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 19:37:17,899 127.0.0.1 - - [10/Nov/2024 19:37:17] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:37:19,660 Token extracted from cookies.
+2024-11-10 19:37:19,661 Client 'ahoj' performed action 'increase 150'. New counter value: 300
+2024-11-10 19:37:19,662 127.0.0.1 - - [10/Nov/2024 19:37:19] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 19:37:19,715 127.0.0.1 - - [10/Nov/2024 19:37:19] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:37:25,795 Token extracted from cookies.
+2024-11-10 19:37:25,797 127.0.0.1 - - [10/Nov/2024 19:37:25] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 19:37:25,893 127.0.0.1 - - [10/Nov/2024 19:37:25] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:37:29,272 Token extracted from cookies.
+2024-11-10 19:37:29,273 Client 'ahoj' performed action 'decrease 150'. New counter value: 150
+2024-11-10 19:37:29,274 127.0.0.1 - - [10/Nov/2024 19:37:29] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 19:37:29,348 127.0.0.1 - - [10/Nov/2024 19:37:29] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:37:31,717 127.0.0.1 - - [10/Nov/2024 19:37:31] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:37:31,832 127.0.0.1 - - [10/Nov/2024 19:37:31] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-10 19:37:36,710 Failed login attempt for user 'ahoj' from IP 127.0.0.1
+2024-11-10 19:37:36,711 127.0.0.1 - - [10/Nov/2024 19:37:36] "POST /register HTTP/1.1" 200 -
+2024-11-10 19:37:36,808 127.0.0.1 - - [10/Nov/2024 19:37:36] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:37:40,574 User 'ahoj' logged in successfully from IP 127.0.0.1, active connections: 2
+2024-11-10 19:37:40,574 127.0.0.1 - - [10/Nov/2024 19:37:40] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 19:37:40,592 Token extracted from cookies.
+2024-11-10 19:37:40,593 127.0.0.1 - - [10/Nov/2024 19:37:40] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 19:37:40,726 127.0.0.1 - - [10/Nov/2024 19:37:40] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:37:47,481 Token extracted from cookies.
+2024-11-10 19:37:47,482 Client 'ahoj' performed action 'decrease 15'. New counter value: 135
+2024-11-10 19:37:47,482 127.0.0.1 - - [10/Nov/2024 19:37:47] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 19:37:47,566 127.0.0.1 - - [10/Nov/2024 19:37:47] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:37:48,760 Token extracted from cookies.
+2024-11-10 19:37:48,761 127.0.0.1 - - [10/Nov/2024 19:37:48] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-10 19:37:48,771 Token extracted from cookies.
+2024-11-10 19:37:48,772 User 'ahoj' logged out, active connections: 1
+2024-11-10 19:37:48,772 127.0.0.1 - - [10/Nov/2024 19:37:48] "GET /logout HTTP/1.1" 200 -
+2024-11-10 19:37:58,001 Token missing in logout request from IP 127.0.0.1
+2024-11-10 19:37:58,001 127.0.0.1 - - [10/Nov/2024 19:37:58] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-10 19:37:58,012 127.0.0.1 - - [10/Nov/2024 19:37:58] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:37:58,128 127.0.0.1 - - [10/Nov/2024 19:37:58] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:38:06,329 User 'ahoj' logged in successfully from IP 127.0.0.1, active connections: 2
+2024-11-10 19:38:06,330 127.0.0.1 - - [10/Nov/2024 19:38:06] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 19:38:06,346 Token extracted from cookies.
+2024-11-10 19:38:06,348 127.0.0.1 - - [10/Nov/2024 19:38:06] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 19:38:06,517 127.0.0.1 - - [10/Nov/2024 19:38:06] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:38:10,834 Token extracted from cookies.
+2024-11-10 19:38:10,835 127.0.0.1 - - [10/Nov/2024 19:38:10] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-10 19:38:10,845 Token extracted from cookies.
+2024-11-10 19:38:10,845 User 'ahoj' logged out, active connections: 1
+2024-11-10 19:38:10,847 127.0.0.1 - - [10/Nov/2024 19:38:10] "GET /logout HTTP/1.1" 200 -
+2024-11-10 19:38:17,804 127.0.0.1 - - [10/Nov/2024 19:38:17] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:38:17,900 127.0.0.1 - - [10/Nov/2024 19:38:17] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:38:22,387 Failed login attempt for user 'ahoj' from IP 127.0.0.1
+2024-11-10 19:38:22,388 127.0.0.1 - - [10/Nov/2024 19:38:22] "POST /register HTTP/1.1" 200 -
+2024-11-10 19:38:22,473 127.0.0.1 - - [10/Nov/2024 19:38:22] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:38:25,453 User 'ahoj' logged in successfully from IP 127.0.0.1, active connections: 2
+2024-11-10 19:38:25,454 127.0.0.1 - - [10/Nov/2024 19:38:25] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 19:38:25,464 Token extracted from cookies.
+2024-11-10 19:38:25,465 127.0.0.1 - - [10/Nov/2024 19:38:25] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 19:38:25,613 127.0.0.1 - - [10/Nov/2024 19:38:25] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:45:17,145  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-11-10 19:45:17,145  * Running on https://192.168.0.103:5000/ (Press CTRL+C to quit)
+2024-11-10 19:45:39,480 User 'user1' registered successfully from IP 127.0.0.1, active connections: 1
+2024-11-10 19:45:39,481 127.0.0.1 - - [10/Nov/2024 19:45:39] "POST /api/register HTTP/1.1" 200 -
+2024-11-10 19:45:40,503 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NzkzOX0.Ouu67Gg2RasJSdoYO75-7QCUYJddGCCANcV4QOYHPhI
+2024-11-10 19:45:40,503 Token decoded successfully. Client ID: user1
+2024-11-10 19:45:40,503 Client 'user1' requested action: INCREASE 15
+2024-11-10 19:45:40,504 Client 'user1' performed action 'INCREASE 15'. New counter value: 15
+2024-11-10 19:45:40,504 127.0.0.1 - - [10/Nov/2024 19:45:40] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:45:41,525 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NzkzOX0.Ouu67Gg2RasJSdoYO75-7QCUYJddGCCANcV4QOYHPhI
+2024-11-10 19:45:41,525 Token decoded successfully. Client ID: user1
+2024-11-10 19:45:41,525 Client 'user1' requested action: DECREASE 5
+2024-11-10 19:45:41,525 Client 'user1' performed action 'DECREASE 5'. New counter value: 10
+2024-11-10 19:45:41,526 127.0.0.1 - - [10/Nov/2024 19:45:41] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:45:42,546 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2NzkzOX0.Ouu67Gg2RasJSdoYO75-7QCUYJddGCCANcV4QOYHPhI
+2024-11-10 19:45:42,546 Token decoded successfully. Client ID: user1
+2024-11-10 19:45:42,546 Client 'user1' requested action: INCREASE 20
+2024-11-10 19:45:42,547 Client 'user1' performed action 'INCREASE 20'. New counter value: 30
+2024-11-10 19:45:42,547 127.0.0.1 - - [10/Nov/2024 19:45:42] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:45:47,563 Token extracted from Authorization header.
+2024-11-10 19:45:47,564 All sessions for user 'user1' have ended. User data deleted.
+2024-11-10 19:45:47,564 127.0.0.1 - - [10/Nov/2024 19:45:47] "GET /logout HTTP/1.1" 200 -
+2024-11-10 19:46:00,544 User 'user1' registered successfully from IP 127.0.0.1, active connections: 1
+2024-11-10 19:46:00,544 127.0.0.1 - - [10/Nov/2024 19:46:00] "POST /api/register HTTP/1.1" 200 -
+2024-11-10 19:46:01,562 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2Nzk2MH0.8IRgCFqA3Z20sEurtOkqWq-I3cfCnexEoGucuYJJ3Ec
+2024-11-10 19:46:01,562 Token decoded successfully. Client ID: user1
+2024-11-10 19:46:01,563 Client 'user1' requested action: INCREASE 15
+2024-11-10 19:46:01,563 Client 'user1' performed action 'INCREASE 15'. New counter value: 15
+2024-11-10 19:46:01,563 127.0.0.1 - - [10/Nov/2024 19:46:01] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:46:02,579 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2Nzk2MH0.8IRgCFqA3Z20sEurtOkqWq-I3cfCnexEoGucuYJJ3Ec
+2024-11-10 19:46:02,579 Token decoded successfully. Client ID: user1
+2024-11-10 19:46:02,580 Client 'user1' requested action: DECREASE 5
+2024-11-10 19:46:02,580 Client 'user1' performed action 'DECREASE 5'. New counter value: 10
+2024-11-10 19:46:02,580 127.0.0.1 - - [10/Nov/2024 19:46:02] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:46:03,597 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2Nzk2MH0.8IRgCFqA3Z20sEurtOkqWq-I3cfCnexEoGucuYJJ3Ec
+2024-11-10 19:46:03,597 Token decoded successfully. Client ID: user1
+2024-11-10 19:46:03,598 Client 'user1' requested action: INCREASE 20
+2024-11-10 19:46:03,598 Client 'user1' performed action 'INCREASE 20'. New counter value: 30
+2024-11-10 19:46:03,598 127.0.0.1 - - [10/Nov/2024 19:46:03] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:46:08,615 Token extracted from Authorization header.
+2024-11-10 19:46:08,616 All sessions for user 'user1' have ended. User data deleted.
+2024-11-10 19:46:08,616 127.0.0.1 - - [10/Nov/2024 19:46:08] "GET /logout HTTP/1.1" 200 -
+2024-11-10 19:46:44,887 User 'user1' registered successfully from IP 127.0.0.1, active connections: 1
+2024-11-10 19:46:44,887 127.0.0.1 - - [10/Nov/2024 19:46:44] "POST /api/register HTTP/1.1" 200 -
+2024-11-10 19:46:45,904 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2ODAwNH0.ZnU-gKKP2nqztPzcGtigy5bLVu1ZtG7u29PQpNUAVFo
+2024-11-10 19:46:45,904 Token decoded successfully. Client ID: user1
+2024-11-10 19:46:45,904 Client 'user1' requested action: INCREASE 15
+2024-11-10 19:46:45,904 Client 'user1' performed action 'INCREASE 15'. New counter value: 15
+2024-11-10 19:46:45,905 127.0.0.1 - - [10/Nov/2024 19:46:45] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:46:46,922 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2ODAwNH0.ZnU-gKKP2nqztPzcGtigy5bLVu1ZtG7u29PQpNUAVFo
+2024-11-10 19:46:46,923 Token decoded successfully. Client ID: user1
+2024-11-10 19:46:46,923 Client 'user1' requested action: DECREASE 5
+2024-11-10 19:46:46,923 Client 'user1' performed action 'DECREASE 5'. New counter value: 10
+2024-11-10 19:46:46,923 127.0.0.1 - - [10/Nov/2024 19:46:46] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:46:47,940 Token extracted from Authorization header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ1c2VyMSIsImV4cCI6MTczMTI2ODAwNH0.ZnU-gKKP2nqztPzcGtigy5bLVu1ZtG7u29PQpNUAVFo
+2024-11-10 19:46:47,940 Token decoded successfully. Client ID: user1
+2024-11-10 19:46:47,940 Client 'user1' requested action: INCREASE 20
+2024-11-10 19:46:47,941 Client 'user1' performed action 'INCREASE 20'. New counter value: 30
+2024-11-10 19:46:47,941 127.0.0.1 - - [10/Nov/2024 19:46:47] "POST /action HTTP/1.1" 200 -
+2024-11-10 19:46:52,955 Token extracted from Authorization header.
+2024-11-10 19:46:52,956 All sessions for user 'user1' have ended. User data deleted.
+2024-11-10 19:46:52,956 127.0.0.1 - - [10/Nov/2024 19:46:52] "GET /logout HTTP/1.1" 200 -
+2024-11-10 19:47:16,782 127.0.0.1 - - [10/Nov/2024 19:47:16] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:47:16,977 127.0.0.1 - - [10/Nov/2024 19:47:16] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-10 19:47:20,712 User 'ahoj' registered successfully from IP 127.0.0.1, active connections: 1
+2024-11-10 19:47:20,713 127.0.0.1 - - [10/Nov/2024 19:47:20] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 19:47:20,722 Token extracted from cookies.
+2024-11-10 19:47:20,726 127.0.0.1 - - [10/Nov/2024 19:47:20] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 19:47:20,907 127.0.0.1 - - [10/Nov/2024 19:47:20] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:47:25,528 Token extracted from cookies.
+2024-11-10 19:47:25,529 Client 'ahoj' performed action 'increase 50'. New counter value: 50
+2024-11-10 19:47:25,530 127.0.0.1 - - [10/Nov/2024 19:47:25] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 19:47:25,623 127.0.0.1 - - [10/Nov/2024 19:47:25] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:47:26,683 Token extracted from cookies.
+2024-11-10 19:47:26,684 Client 'ahoj' performed action 'increase 50'. New counter value: 100
+2024-11-10 19:47:26,685 127.0.0.1 - - [10/Nov/2024 19:47:26] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 19:47:26,782 127.0.0.1 - - [10/Nov/2024 19:47:26] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:47:30,190 127.0.0.1 - - [10/Nov/2024 19:47:30] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:47:30,311 127.0.0.1 - - [10/Nov/2024 19:47:30] "GET /static/images/RegisterBK.png HTTP/1.1" 200 -
+2024-11-10 19:47:34,362 User 'ahoj' logged in successfully from IP 127.0.0.1, active connections: 2
+2024-11-10 19:47:34,363 127.0.0.1 - - [10/Nov/2024 19:47:34] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 19:47:34,379 Token extracted from cookies.
+2024-11-10 19:47:34,381 127.0.0.1 - - [10/Nov/2024 19:47:34] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 19:47:34,555 127.0.0.1 - - [10/Nov/2024 19:47:34] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:47:37,713 Token extracted from cookies.
+2024-11-10 19:47:37,714 Client 'ahoj' performed action 'increase 50'. New counter value: 150
+2024-11-10 19:47:37,714 127.0.0.1 - - [10/Nov/2024 19:47:37] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 19:47:37,803 127.0.0.1 - - [10/Nov/2024 19:47:37] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:47:42,699 Token extracted from cookies.
+2024-11-10 19:47:42,700 Client 'ahoj' performed action 'increase 5'. New counter value: 155
+2024-11-10 19:47:42,700 127.0.0.1 - - [10/Nov/2024 19:47:42] "POST /perform_action HTTP/1.1" 200 -
+2024-11-10 19:47:42,788 127.0.0.1 - - [10/Nov/2024 19:47:42] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:47:43,975 Token extracted from cookies.
+2024-11-10 19:47:43,976 127.0.0.1 - - [10/Nov/2024 19:47:43] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-10 19:47:43,986 Token extracted from cookies.
+2024-11-10 19:47:43,986 All sessions for user 'ahoj' have ended. User data deleted.
+2024-11-10 19:47:43,987 127.0.0.1 - - [10/Nov/2024 19:47:43] "GET /logout HTTP/1.1" 200 -
+2024-11-10 19:47:46,946 Token missing in logout request from IP 127.0.0.1
+2024-11-10 19:47:46,947 127.0.0.1 - - [10/Nov/2024 19:47:46] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-10 19:47:46,958 127.0.0.1 - - [10/Nov/2024 19:47:46] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:47:47,098 127.0.0.1 - - [10/Nov/2024 19:47:47] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:47:51,575 User 'ahoj' registered successfully from IP 127.0.0.1, active connections: 1
+2024-11-10 19:47:51,575 127.0.0.1 - - [10/Nov/2024 19:47:51] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 19:47:51,591 Token extracted from cookies.
+2024-11-10 19:47:51,592 127.0.0.1 - - [10/Nov/2024 19:47:51] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 19:47:51,762 127.0.0.1 - - [10/Nov/2024 19:47:51] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:47:53,076 Token extracted from cookies.
+2024-11-10 19:47:53,077 127.0.0.1 - - [10/Nov/2024 19:47:53] "[32mPOST /perform_action HTTP/1.1[0m" 302 -
+2024-11-10 19:47:53,087 Token extracted from cookies.
+2024-11-10 19:47:53,087 All sessions for user 'ahoj' have ended. User data deleted.
+2024-11-10 19:47:53,088 127.0.0.1 - - [10/Nov/2024 19:47:53] "GET /logout HTTP/1.1" 200 -
+2024-11-10 19:47:57,303 127.0.0.1 - - [10/Nov/2024 19:47:57] "GET /register HTTP/1.1" 200 -
+2024-11-10 19:47:57,406 127.0.0.1 - - [10/Nov/2024 19:47:57] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
+2024-11-10 19:48:01,530 User 'ahoj' registered successfully from IP 127.0.0.1, active connections: 1
+2024-11-10 19:48:01,530 127.0.0.1 - - [10/Nov/2024 19:48:01] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-11-10 19:48:01,541 Token extracted from cookies.
+2024-11-10 19:48:01,542 127.0.0.1 - - [10/Nov/2024 19:48:01] "GET /perform_action HTTP/1.1" 200 -
+2024-11-10 19:48:01,742 127.0.0.1 - - [10/Nov/2024 19:48:01] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -

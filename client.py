@@ -49,21 +49,46 @@ def main(config):
     for action in steps:
         time.sleep(delay)
         data = {'action': action}
-        response = session.post(f"{server_url}/action", json=data, headers=headers)
-        if response.status_code == 200:
-            new_value = response.json()['new_value']
-            print(f"Client {client_id}: Action '{action}' performed. New counter value: {new_value}")
-        else:
-            print(f"Client {client_id}: Action failed - {response.json()['message']}")
+        try:
+            response = session.post(f"{server_url}/action", json=data, headers=headers)
+        except requests.exceptions.SSLError as e:
+            print(f"SSL Error during action '{action}': {e}")
+            return
 
-    time.sleep(50) 
+        if response.status_code == 200:
+            try:
+                new_value = response.json().get('new_value')
+                print(f"Client {client_id}: Action '{action}' performed. New counter value: {new_value}")
+            except ValueError:
+                print(f"Client {client_id}: Received non-JSON response.")
+                print(f"Response Text: {response.text}")
+        else:
+            try:
+                error_message = response.json().get('message', 'No error message provided')
+            except ValueError:
+                error_message = 'Non-JSON error response'
+            print(f"Client {client_id}: Action failed with status code {response.status_code} - {error_message}")
+            print(f"Response Text: {response.text}")
+            return  # Exit the loop or handle as needed
+    
+    time.sleep(5) 
 
     # Log out from the server
-    response = session.get(f"{server_url}/logout", headers=headers)
+    try:
+        response = session.get(f"{server_url}/logout", headers=headers)
+    except requests.exceptions.SSLError as e:
+        print(f"SSL Error during logout: {e}")
+        return
+
     if response.status_code == 200:
         print(f"Client {client_id}: Logged out successfully.")
     else:
-        print(f"Client {client_id}: Logout failed - {response.text}")  # Print raw response
+        try:
+            error_message = response.json().get('message', 'No error message provided')
+        except ValueError:
+            error_message = 'Non-JSON error response'
+        print(f"Client {client_id}: Logout failed with status code {response.status_code} - {error_message}")
+        print(f"Response Text: {response.text}")
 
 # Main function
 # Usage: python client.py client_config.json
