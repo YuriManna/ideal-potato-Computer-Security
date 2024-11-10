@@ -1,19 +1,12 @@
 # ideal-potato-Computer-Security
 
-TODO:
-Testing and Verification
-- Server Logs: Check server.log to verify that actions are being logged correctly, implement different logging levels (DEBUG, INFO, WARNING, ERROR)
-- Implement Certificate Authority
-- Research security vulnerability in the whole code
-- web success message after authentification/log out
-
-
 To run code:
 To install all libraries try running: pip install -r requirements.txt
 
 - to start the flask server run server.py (or from cmd navigate to the directory and run python server.py)
-- after the flask server is running you can check it with 127.0.0.1:5000/status in chrome or other browser (The register page should load)
-- to test client run client.py client_config.json (in cmd python client.py client_config.json), this should do actions specified in client_comfig.json
+- after the flask server is running you can check it with 127.0.0.1:5000/status in chrome or other browser
+- you can interact with the server via web interface using 127.0.0.1:5000/register
+- to test client run client.py <json file> (in cmd python client.py client_config.json), this should do actions specified in client_config.json
 
 2 options of interaction:
 1) CMD
