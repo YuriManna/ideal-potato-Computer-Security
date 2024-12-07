@@ -19,7 +19,7 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 # Encryption Libraries
 from cryptography.fernet import Fernet
-import secrets
+import os
 
 #------------------------------------------------------------------------------------------------
 # Functions
@@ -184,14 +184,18 @@ def encrypt_and_log(message, level='info'):
 #------------------------------------------------------------------------------------------------
 # Initialization
 
-# Load the log encryption key
-logKey = load_encryption_key()
-cipher_suite = Fernet(logKey)
+# Load keys from environment variables
+SECRET_KEY = os.getenv('SECRET_KEY')
+LOG_KEY = os.getenv('LOG_KEY')
 
-# Initialize the Flask application
+if not SECRET_KEY or not LOG_KEY:
+    raise ValueError("Environment variables SECRET_KEY and LOG_KEY must be set! Check generate_keys.py for instructions.")
+
+# Use the loaded keys
 app = Flask(__name__)
+app.secret_key = SECRET_KEY
+cipher_suite = Fernet(LOG_KEY.encode())
 
-app.secret_key = '3f41d5d0b1633b8c03ded3b3db4410e7'
 # Enable CSRF protection
 csrf = CSRFProtect(app)
 

@@ -1,0 +1,18 @@
+# Generated Keys
+SECRET_KEY='a6e459810daf634e061d50a29924ee4db1cb94d847cb6b1d'
+LOG_KEY='G4abz8sVgk8zuCHT3fbVCLOA_vrpxF1LdCOrqRTF86c='
+
+## Instructions to Set Environment Variables ##
+For Linux/Mac:
+export SECRET_KEY='a6e459810daf634e061d50a29924ee4db1cb94d847cb6b1d'
+export LOG_KEY='G4abz8sVgk8zuCHT3fbVCLOA_vrpxF1LdCOrqRTF86c='
+
+For Windows (CMD):
+set SECRET_KEY='a6e459810daf634e061d50a29924ee4db1cb94d847cb6b1d'
+set LOG_KEY='G4abz8sVgk8zuCHT3fbVCLOA_vrpxF1LdCOrqRTF86c='
+
+For Windows (Powershell - VS Terminal):
+$env:SECRET_KEY='a6e459810daf634e061d50a29924ee4db1cb94d847cb6b1d'
+$env:LOG_KEY='G4abz8sVgk8zuCHT3fbVCLOA_vrpxF1LdCOrqRTF86c='
+
+Add these lines to your environment configuration if needed.

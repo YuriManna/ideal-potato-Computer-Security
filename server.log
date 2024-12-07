@@ -124,3 +124,13 @@
 2024-12-07 12:22:37,601 127.0.0.1 - - [07/Dec/2024 12:22:37] "[36mGET /static/images/RegisterBK.png HTTP/1.1[0m" 304 -
 2024-12-07 12:22:41,267 127.0.0.1 - - [07/Dec/2024 12:22:41] "GET /status HTTP/1.1" 200 -
 2024-12-07 12:22:41,371 127.0.0.1 - - [07/Dec/2024 12:22:41] "GET /static/images/Pozdrav_z_dovolene.jpg HTTP/1.1" 200 -
+2024-12-07 19:21:38,045 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.129.22:5000
+2024-12-07 19:21:38,045 [33mPress CTRL+C to quit[0m
+2024-12-07 19:25:51,132 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.129.22:5000
+2024-12-07 19:25:51,132 [33mPress CTRL+C to quit[0m

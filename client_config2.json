@@ -1,8 +1,8 @@
 {
     "id": "client2",
-    "password": "diocane123",
+    "password": "Diocane123$",
     "server": {
-        "ip": "127.0.0.1",
+        "ip": "127.0.0.2",
         "port": "5000"
     },
     "actions": {
