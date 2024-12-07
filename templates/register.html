@@ -70,6 +70,7 @@
             {{ form.client_id(size=32) }}
             <label for="password">Password:</label>
             {{ form.password(size=32) }}
+            <small>Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one digit, and one special character (@$!%*?&).</small>
             {{ form.submit() }}
         </form>
         <!-- Display any messages or errors. -->

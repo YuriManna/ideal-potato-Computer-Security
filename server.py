@@ -40,6 +40,25 @@ def is_valid_input(input_str):
     pattern = r'^\w{3,}$'
     return bool(re.match(pattern, input_str))
 
+def is_valid_password(password):
+    """
+    Validates the password string.
+    Ensures it meets the security criteria.
+
+    Criteria:
+    - Must be at least 8 characters long.
+    - Must contain at least one uppercase letter.
+    - Must contain at least one lowercase letter.
+    - Must contain at least one digit.
+    - Must contain at least one special character (@$!%*?&).
+    - Can only contain alphanumeric characters and special characters (@$!%*?&).
+
+    Returns:
+        True if password is valid, False otherwise.
+    """
+    pattern = r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$'
+    return bool(re.match(pattern, password))
+
 def parse_action(action_str):
     """
     Parses the action command.
@@ -199,11 +218,16 @@ class RegistrationForm(FlaskForm):
         Length(min=3), # Minimum length of 3 characters
         Regexp('^\w{3,}$', message='Only alphanumeric characters and underscores are allowed.')
     ])
+    
     # Password input validation
     password = PasswordField('Password', validators=[
-        DataRequired(), # Ensure the field is not empty
-        Length(min=3), # Minimum length of 3 characters
-        Regexp('^\w{3,}$', message='Only alphanumeric characters and underscores are allowed.')
+        DataRequired(),  # Ensure the field is not empty
+        Length(min=8, message='Password must be at least 8 characters long.'),  # Minimum length of 8 characters
+        Regexp('(?=.*[A-Z])', message='Password must contain at least one uppercase letter.'),  # At least one uppercase letter
+        Regexp('(?=.*[a-z])', message='Password must contain at least one lowercase letter.'),  # At least one lowercase letter
+        Regexp('(?=.*\d)', message='Password must contain at least one digit.'),  # At least one digit
+        Regexp('(?=.*[@$!%*?&])', message='Password must contain at least one special character (@$!%*?&).'),  # At least one special character
+        Regexp('^[A-Za-z\d@$!%*?&]+$', message='Password can only contain alphanumeric characters and special characters (@$!%*?&).')  # Only allowed characters
     ])
     submit = SubmitField('Register')
 
@@ -244,7 +268,7 @@ def api_register():
     password = data.get('password') # Get the password
     
     # Validate inputs
-    if not is_valid_input(client_id) or not is_valid_input(password):
+    if not is_valid_input(client_id) or not is_valid_password(password):
         encrypt_and_log(f"Invalid input during registration from IP {request.remote_addr}", level='warning')
         return jsonify({'status': 'error', 'message': 'Invalid input'}), 400
 
@@ -281,8 +305,8 @@ def register_page():
         password = form.password.data
 
         # Validate inputs
-        if not is_valid_input(client_id) or not is_valid_input(password):
-            message = 'Invalid input. Only alphanumeric characters and underscores are allowed, minimum length 3.'
+        if not is_valid_input(client_id) or not is_valid_password(password):
+            message = 'Invalid input. Only alphanumeric characters,underscores and special characters are allowed, minimum lenght is 8 characters.'
             return render_template('register.html', form=form, message=message)
 
         # Hash the password
